@@ -8,7 +8,6 @@
 #include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/FactoryShipLv1.cpp"
 #include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/Galaga_USFX_LAB02.cpp"
 #include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/Galaga_USFX_LAB02GameMode.cpp"
-#include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/Galaga_USFX_LAB02Pawn.cpp"
 #include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/IAbsFactory.cpp"
 #include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/IBuilderMotherShip.cpp"
 #include "C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Source/Galaga_USFX_LAB02/ISetMotherShip.cpp"

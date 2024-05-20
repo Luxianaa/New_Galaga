@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GALAGA_USFX_LAB02_ShieldMotherShip_generated_h
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_SPARSE_DATA
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS_NO_PURE_DECLS \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_SPARSE_DATA
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAShieldMotherShip(); \
 	friend struct Z_Construct_UClass_AShieldMotherShip_Statics; \
@@ -26,7 +26,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AShieldMotherShip*>(this); }
 
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesAShieldMotherShip(); \
 	friend struct Z_Construct_UClass_AShieldMotherShip_Statics; \
@@ -36,7 +36,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AShieldMotherShip*>(this); }
 
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_STANDARD_CONSTRUCTORS \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AShieldMotherShip(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AShieldMotherShip) \
@@ -49,7 +49,7 @@ private: \
 public:
 
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_ENHANCED_CONSTRUCTORS \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AShieldMotherShip(AShieldMotherShip&&); \
@@ -60,31 +60,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AShieldMotherShip)
 
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_PRIVATE_PROPERTY_OFFSET \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__MotherShip() { return STRUCT_OFFSET(AShieldMotherShip, MotherShip); }
 
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_10_PROLOG
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_GENERATED_BODY_LEGACY \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_10_PROLOG
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_PRIVATE_PROPERTY_OFFSET \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_SPARSE_DATA \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_STANDARD_CONSTRUCTORS \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_PRIVATE_PROPERTY_OFFSET \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_SPARSE_DATA \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_GENERATED_BODY \
+#define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_PRIVATE_PROPERTY_OFFSET \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_SPARSE_DATA \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS_NO_PURE_DECLS \
-	Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_ENHANCED_CONSTRUCTORS \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_PRIVATE_PROPERTY_OFFSET \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_SPARSE_DATA \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_INCLASS_NO_PURE_DECLS \
+	Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -92,7 +92,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GALAGA_USFX_LAB02_API UClass* StaticClass<class AShieldMotherShip>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Galaga_USFX_LAB02_Source_Galaga_USFX_LAB02_ShieldMotherShip_h
+#define CURRENT_FILE_ID Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_ShieldMotherShip_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

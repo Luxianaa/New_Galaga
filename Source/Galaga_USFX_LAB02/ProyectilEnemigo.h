@@ -6,7 +6,6 @@
 #include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "ProyectilEnemigo.generated.h"
-#include "Particles/ParticleSystemComponent.h"
 
 UCLASS()
 class GALAGA_USFX_LAB02_API AProyectilEnemigo : public AActor
