@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+<RuntimeProperties>
+<CrashVersion>3</CrashVersion>
+<ExecutionGuid>5B2ADB5C409D42480C93AD8BFA409DF0</ExecutionGuid>
+<CrashGUID>UE4CC-Windows-BEE926584B066CE9D3E7D4B820B8E90E_0000</CrashGUID>
+<IsEnsure>true</IsEnsure>
+<IsAssert>false</IsAssert>
+<CrashType>Ensure</CrashType>
+<ErrorMessage>Ensure condition failed: InParent != this [File:D:/Build/++UE4/Sync/Engine/Source/Runtime/Engine/Private/Components/SceneComponent.cpp] [Line: 1752]
+Cannot attach a component to itself.
+Stack: 
+0x00007ff6eafa8cc7 Galaga_USFX_LAB02.exe!DispatchCheckVerify&lt;bool,&lt;lambda_62e3327b2bd2a21d46f005357ffa5da4&gt; &gt;() []
+0x00007ff6e8db93b1 Galaga_USFX_LAB02.exe!USceneComponent::SetupAttachment() []
+0x00007ff6e526756e Galaga_USFX_LAB02.exe!ACapsulaCrazy::ACapsulaCrazy() [C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB02\Source\Galaga_USFX_LAB02\CapsulaCrazy.cpp:12]
+0x00007ff6e5938ce3 Galaga_USFX_LAB02.exe!UClass::CreateDefaultObject() []
+0x00007ff6e5bfeac1 Galaga_USFX_LAB02.exe!UObjectInitialized() []
+0x00007ff6e5bdcd30 Galaga_USFX_LAB02.exe!ProcessNewlyLoadedUObjects() []
+0x00007ff6e423cdee Galaga_USFX_LAB02.exe!FEngineLoop::PreInitPostStartupScreen() []
+0x00007ff6e4236d3b Galaga_USFX_LAB02.exe!GuardedMain() []
+0x00007ff6e42370ca Galaga_USFX_LAB02.exe!GuardedMainWrapper() []
+0x00007ff6e42394cc Galaga_USFX_LAB02.exe!LaunchWindowsStartup() []
+0x00007ff6e424ad14 Galaga_USFX_LAB02.exe!WinMain() []
+0x00007ff6eaa8bc1e Galaga_USFX_LAB02.exe!__scrt_common_main_seh() [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288]
+0x00007ffcda2c257d KERNEL32.DLL!UnknownFunction []
+0x00007ffcdbd6aa48 ntdll.dll!UnknownFunction []
+</ErrorMessage>
+<CrashReporterMessage></CrashReporterMessage>
+<ProcessId>27720</ProcessId>
+<SecondsSinceStart>0</SecondsSinceStart>
+<IsInternalBuild>false</IsInternalBuild>
+<IsPerforceBuild>false</IsPerforceBuild>
+<IsSourceDistribution>false</IsSourceDistribution>
+<GameName>UE4-Galaga_USFX_LAB02</GameName>
+<ExecutableName>Galaga_USFX_LAB02</ExecutableName>
+<BuildConfiguration>Development</BuildConfiguration>
+<GameSessionID></GameSessionID>
+<Symbols>**UE4*Release-4.27-CL-18319896-Win64-Development</Symbols>
+<PlatformName>WindowsNoEditor</PlatformName>
+<PlatformNameIni>Windows</PlatformNameIni>
+<EngineMode>Game</EngineMode>
+<EngineModeEx>Unset</EngineModeEx>
+<DeploymentName></DeploymentName>
+<EngineVersion>4.27.2-18319896+++UE4+Release-4.27</EngineVersion>
+<CommandLine> ../../../Galaga_USFX_LAB02/Galaga_USFX_LAB02.uproject /Game/TwinStickCPP/Maps/TwinStickExampleMap -stdout -abslog=&quot;C:\Users\lucia\AppData\Roaming\Unreal Engine\AutomationTool\Logs\C+Program+Files+Epic+Games+UE_4.27\Client.log&quot; -Messaging -Windowed -CrashForUAT -SessionId=3669A9524513F8B7D669E58EBC53B6D5 -SessionOwner=lucia -SessionName=&quot;Launch On Device&quot;</CommandLine>
+<LanguageLCID>0</LanguageLCID>
+<AppDefaultLocale>en-US</AppDefaultLocale>
+<BuildVersion>++UE4+Release-4.27-CL-18319896</BuildVersion>
+<IsUE4Release>false</IsUE4Release>
+<IsRequestingExit>false</IsRequestingExit>
+<UserName></UserName>
+<BaseDir>C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Saved/StagedBuilds/WindowsNoEditor/Galaga_USFX_LAB02/Binaries/Win64/</BaseDir>
+<RootDir>C:/Users/lucia/Desktop/Trabajos Unreal/Galaga_USFX_LAB02/Saved/StagedBuilds/WindowsNoEditor/</RootDir>
+<MachineId>0B54ECBC4AE3F2CF76E17C9525E29545</MachineId>
+<LoginId>0b54ecbc4ae3f2cf76e17c9525e29545</LoginId>
+<EpicAccountId>b021c099370c416cbb72df5d1fc66395</EpicAccountId>
+<SourceContext></SourceContext>
+<UserDescription></UserDescription>
+<UserActivityHint></UserActivityHint>
+<CrashDumpMode>0</CrashDumpMode>
+<GameStateName></GameStateName>
+<Misc.NumberOfCores>4</Misc.NumberOfCores>
+<Misc.NumberOfCoresIncludingHyperthreads>8</Misc.NumberOfCoresIncludingHyperthreads>
+<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+<Misc.CPUVendor>GenuineIntel</Misc.CPUVendor>
+<Misc.CPUBrand>11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz</Misc.CPUBrand>
+<Misc.PrimaryGPUBrand>Intel(R) Iris(R) Xe Graphics</Misc.PrimaryGPUBrand>
+<Misc.OSVersionMajor>Windows 10 (Release 2009)</Misc.OSVersionMajor>
+<Misc.OSVersionMinor></Misc.OSVersionMinor>
+<MemoryStats.TotalPhysical>16913522688</MemoryStats.TotalPhysical>
+<MemoryStats.TotalVirtual>140737488224256</MemoryStats.TotalVirtual>
+<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+<MemoryStats.TotalPhysicalGB>16</MemoryStats.TotalPhysicalGB>
+<MemoryStats.AvailablePhysical>1234497536</MemoryStats.AvailablePhysical>
+<MemoryStats.AvailableVirtual>14239899648</MemoryStats.AvailableVirtual>
+<MemoryStats.UsedPhysical>428806144</MemoryStats.UsedPhysical>
+<MemoryStats.PeakUsedPhysical>436695040</MemoryStats.PeakUsedPhysical>
+<MemoryStats.UsedVirtual>404897792</MemoryStats.UsedVirtual>
+<MemoryStats.PeakUsedVirtual>404897792</MemoryStats.PeakUsedVirtual>
+<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+<NumMinidumpFramesToIgnore>0</NumMinidumpFramesToIgnore>
+<CallStack></CallStack>
+<PCallStack>
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 7728cc7         
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 55393b1         
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 19e756e         
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 20b8ce3         
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 237eac1         
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 235cd30         
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 9bcdee          
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 9b6d3b          
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 9b70ca          
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 9b94cc          
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 9cad14          
+Galaga_USFX_LAB02  0x00007ff6e3880000 + 720bc1e         
+KERNEL32           0x00007ffcda2b0000 + 1257d           
+ntdll              0x00007ffcdbd10000 + 5aa48           
+</PCallStack>
+<PCallStackHash>F61EBB724839FCEDE08DEF1594E526D99140E63D</PCallStackHash>
+</RuntimeProperties>
+<PlatformProperties>
+<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+<IsRunningOnBattery>false</IsRunningOnBattery>
+<PlatformCallbackResult>0</PlatformCallbackResult>
+</PlatformProperties>
+<EngineData>
+<RHI.IsGPUOverclocked>false</RHI.IsGPUOverclocked>
+<RHI.RHIName>D3D11</RHI.RHIName>
+<RHI.AdapterName>Intel(R) Iris(R) Xe Graphics</RHI.AdapterName>
+<RHI.UserDriverVersion>30.0.101.1191</RHI.UserDriverVersion>
+<RHI.InternalDriverVersion>30.0.101.1191</RHI.InternalDriverVersion>
+<RHI.DriverDate>12-3-2021</RHI.DriverDate>
+<RHI.FeatureLevel>SM5</RHI.FeatureLevel>
+<DeviceProfile.Name>WindowsNoEditor</DeviceProfile.Name>
+</EngineData>
+<GameData>
+</GameData>
+</FGenericCrashContext>
