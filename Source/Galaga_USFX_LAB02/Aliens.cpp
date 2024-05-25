@@ -5,6 +5,8 @@
 #include "ProyectilEnemigo.h"
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Galaga_USFX_LAB02Projectile.h"
+#include "AComponenteMovimiento.h"
 
 // Sets default values
 AAliens::AAliens()
@@ -14,12 +16,14 @@ AAliens::AAliens()
 	VelocidadVertical = 1.0f; 
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> meshA(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone_2.Shape_Cone_2'"));
 	meshAlien = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshAlien")); 
+	Movimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("Movimiento"));
 	meshAlien->SetupAttachment(RootComponent); 
 	meshAlien->SetStaticMesh(meshA.Object); 
 	RootComponent = meshAlien;  
 	SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 	FireRate = 2.0f;
 	InitialLifeSpan = 6.0f;
+	Vidas=2;	 
 
 }
 
@@ -34,18 +38,19 @@ void AAliens::BeginPlay()
 void AAliens::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	float AlturaInicial = 200.0f;
-	float AlturaFinal = 350.0f;
-	// Calcular la nueva posición en Z
-	float NuevaAltura = FMath::Lerp(AlturaInicial, AlturaFinal, FMath::Abs(FMath::Sin(GetWorld()->TimeSeconds * VelocidadVertical)));
-	// Si ya hemos alcanzado la altura final, invertimos la dirección
-	if (FMath::IsNearlyEqual(NuevaAltura, AlturaFinal, 1.0f))
-	{
-		VelocidadVertical *= -1.0f; // Cambiamos la dirección
-	}
+	//float AlturaInicial = 200.0f;
+	//float AlturaFinal = 400.0f;
+	//// Calcular la nueva posición en Z
+	//float NuevaAltura = FMath::Lerp(AlturaInicial, AlturaFinal, FMath::Abs(FMath::Sin(GetWorld()->TimeSeconds * VelocidadVertical)));
+	//// Si ya hemos alcanzado la altura final, invertimos la dirección
+	//if (FMath::IsNearlyEqual(NuevaAltura, AlturaFinal, 1.0f))
+	//{
+	//	VelocidadVertical *= -1.0f; // Cambiamos la dirección
+	//}
 
-	// Establecer la nueva posición de la nave
-	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, NuevaAltura)); 
+	//// Establecer la nueva posición de la nave
+	//SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, NuevaAltura)); 
+	Movimiento->TickComponent(DeltaTime, ELevelTick::LEVELTICK_TimeOnly, nullptr);
 }
 
 void AAliens::FireProjectile()
@@ -78,3 +83,15 @@ void AAliens::Drop()
 	FVector NewLocation = GetActorLocation() + GetActorForwardVector() * 300.0f; 
 	SetActorLocation(NewLocation);  
 }
+
+void AAliens::RecibirImpacto()
+{
+	if (Vidas > 0)
+	{
+		Vidas--;
+
+		Destroy();
+	}
+}
+
+

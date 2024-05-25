@@ -47,7 +47,7 @@ void UAComponenteMovimiento::TickComponent(float DeltaTime, ELevelTick TickType,
         float LimiteIzquierdo = -1600.0f;
 
         // Definir la velocidad de movimiento horizontal
-        float VelocidadHorizontal = 1000.0f;
+        float VelocidadHorizontal = 800.0f;
 
         // Calcular el desplazamiento horizontal para este fotograma
         float DesplazamientoHorizontal = VelocidadHorizontal * DeltaTime;

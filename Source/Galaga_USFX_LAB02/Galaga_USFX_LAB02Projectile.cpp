@@ -54,6 +54,7 @@ void AGalaga_USFX_LAB02Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* O
 {
 	FacadeShip->CollideProjectile(OtherActor);
 	FacadeShip->CollideShield(OtherActor);
+	FacadeShip->CollideAliens(OtherActor);
 
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())

@@ -17,6 +17,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* meshAlien;
 	int VelocidadVertical ;
+	int Vidas;
+	class UAComponenteMovimiento* Movimiento;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -28,5 +30,6 @@ public:
 	void Drop();
 	FTimerHandle TimerHandle;
 	float FireRate;
-
+	void RecibirImpacto();
+	
 };

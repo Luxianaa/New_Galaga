@@ -28,11 +28,13 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	case 1:
 		FacadeShip->SpawnShipsLevel1();
 		FacadeShip->SpawnCapsules();
+		FacadeShip->SpawnMoon();
 
 		break;
 	case 2:
 		FacadeShip->SpawnShipsLevel2();
 		FacadeShip->SpawnRagerShips(); 
+		FacadeShip->SpawnMoon(); 
 		break;
 	}
 //-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//

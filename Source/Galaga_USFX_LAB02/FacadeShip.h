@@ -30,6 +30,7 @@ public:
 	void SpawnShipsLevel2();
 	void SpawnCapsules();
 	void SpawnRagerShips();
+	void SpawnMoon();
 	FTimerHandle SpawnTimerHandle; 
 	void CollideProjectile(AActor* OtherActor);//pawn a NE
 	void CollideShield(AActor* OtherActor);//MOthership
@@ -37,4 +38,5 @@ public:
 	void CollideEnergyCapsule(AActor* OtherActor); //pawn	
 	void CollideEnemyProjectile(AActor* OtherActor); //pawn
 	void CollideLifeCapsule(AActor* OtherActor); //pawn
+	void CollideAliens(AActor* OtherActor); 
 };

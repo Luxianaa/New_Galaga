@@ -28,6 +28,8 @@
 #include "ProyectilEnemigo.h"
 #include "Capsula.h"
 #include "Galaga_USFX_LAB02Pawn.h" 
+#include "Aliens.h"
+#include "Moon.h"
 
 
 // Sets default values
@@ -175,6 +177,13 @@ void AFacadeShip::SpawnRagerShips()
 
 }
 
+void AFacadeShip::SpawnMoon()
+{
+	FVector SpawnLocation = FVector(320.0f, 1480.0f, 990.0f);
+	FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
+	AMoon* Moon = GetWorld()->SpawnActor<AMoon>(SpawnLocation, SpawnRotation); 
+}
+
 void AFacadeShip::CollideProjectile(AActor* OtherActor)
 {
 	//Collide for my projectile
@@ -266,5 +275,14 @@ void AFacadeShip::CollideLifeCapsule(AActor* OtherActor)
 		//Destruir la capsula
 	}
 
+}
+
+void AFacadeShip::CollideAliens(AActor* OtherActor)
+{
+	AAliens* Aliens = Cast<AAliens>(OtherActor);
+	if (Aliens)
+	{
+		Aliens->RecibirImpacto(); 
+	}
 }
 
