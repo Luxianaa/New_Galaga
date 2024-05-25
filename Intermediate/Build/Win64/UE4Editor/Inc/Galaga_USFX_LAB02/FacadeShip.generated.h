@@ -59,7 +59,7 @@ public: \
 
 
 #define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_FacadeShip_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ShipRager() { return STRUCT_OFFSET(AFacadeShip, ShipRager); }
+	FORCEINLINE static uint32 __PPO__NaveEnemiga() { return STRUCT_OFFSET(AFacadeShip, NaveEnemiga); }
 
 
 #define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_FacadeShip_h_9_PROLOG

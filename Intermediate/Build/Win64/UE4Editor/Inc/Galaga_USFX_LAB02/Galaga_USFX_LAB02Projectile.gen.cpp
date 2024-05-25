@@ -24,7 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
-	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AFacadeScore_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AFacadeShip_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AGalaga_USFX_LAB02Projectile::execOnHit)
 	{
@@ -144,9 +144,9 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ParticleSystemComponent;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FacadeScore_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FacadeShip_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FacadeScore;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FacadeShip;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -195,17 +195,17 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent = { "ParticleSystemComponent", nullptr, (EPropertyFlags)0x0040000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02Projectile, ParticleSystemComponent), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeScore_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeShip_MetaData[] = {
 		{ "Category", "Colision" },
 		{ "ModuleRelativePath", "Galaga_USFX_LAB02Projectile.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeScore = { "FacadeScore", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02Projectile, FacadeScore), Z_Construct_UClass_AFacadeScore_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeScore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeScore_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeShip = { "FacadeShip", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02Projectile, FacadeShip), Z_Construct_UClass_AFacadeShip_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeShip_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeShip_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMovement,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeScore,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_FacadeShip,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGalaga_USFX_LAB02Projectile>::IsAbstract,
@@ -234,7 +234,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFX_LAB02Projectile, 1611648285);
+	IMPLEMENT_CLASS(AGalaga_USFX_LAB02Projectile, 997401787);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AGalaga_USFX_LAB02Projectile>()
 	{
 		return AGalaga_USFX_LAB02Projectile::StaticClass();

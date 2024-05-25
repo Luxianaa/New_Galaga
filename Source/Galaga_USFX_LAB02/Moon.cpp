@@ -8,11 +8,11 @@ AMoon::AMoon()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> Mallamoon(TEXT("StaticMesh'/Game/TwinStick/Meshes/ProyectilEnemigo.ProyectilEnemigo'"));
-	mallamoon = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMesh"));//crea el objeto mallaProyectil
-	mallamoon->SetStaticMesh(Mallamoon.Object);  //asigna la malla al objeto mallaProyectil
-	mallamoon->SetupAttachment(RootComponent);//asigna el objeto mallaProyectil al componente raiz
-	RootComponent = mallamoon; 
+	//static ConstructorHelpers::FObjectFinder<UStaticMesh> Mallamoon(TEXT("MaterialInstanceConstant'/Game/TwinStick/Meshes/OrangeMaterial_2.OrangeMaterial_2'"));
+	//mallamoon = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MoonMesh"));//crea el objeto mallaProyectil
+	//mallamoon->SetStaticMesh(Mallamoon.Object);  //asigna la malla al objeto mallaProyectil
+	//mallamoon->SetupAttachment(RootComponent);//asigna el objeto mallaProyectil al componente raiz
+	//RootComponent = mallamoon; 
 }
 
 // Called when the game starts or when spawned

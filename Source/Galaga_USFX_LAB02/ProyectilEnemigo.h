@@ -23,6 +23,7 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	UParticleSystemComponent* ParticleSystemComponent; 
+	class AFacadeShip* FacadeShip;
 public:	
 	// Sets default values for this actor's properties
 	AProyectilEnemigo();

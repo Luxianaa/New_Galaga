@@ -16,25 +16,22 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "CapsulaCrazy.h"
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-const FName AGalaga_USFX_LAB02Pawn::MoveForwardBinding("MoveForward"); 
+const FName AGalaga_USFX_LAB02Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_LAB02Pawn::MoveRightBinding("MoveRight");
 const FName AGalaga_USFX_LAB02Pawn::FireForwardBinding("FireForward");
 const FName AGalaga_USFX_LAB02Pawn::FireRightBinding("FireRight");
-class a;
 
 AGalaga_USFX_LAB02Pawn::AGalaga_USFX_LAB02Pawn()
 {
-	
+
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO.TwinStickUFO'"));
 	// Create the mesh component   /Game/TwinStick/Meshes/TwinStickUFO.TwinStickUFO
 	ShipMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	RootComponent = ShipMeshComponent;
 	ShipMeshComponent->SetCollisionProfileName(UCollisionProfile::Pawn_ProfileName);
 	ShipMeshComponent->SetStaticMesh(ShipMesh.Object);
-	
+
 	// Cache our sound effect
 	static ConstructorHelpers::FObjectFinder<USoundBase> FireAudio(TEXT("SoundWave'/Game/StarterContent/Assets/laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883'"));
 	FireSound = FireAudio.Object;
@@ -53,8 +50,6 @@ AGalaga_USFX_LAB02Pawn::AGalaga_USFX_LAB02Pawn()
 	CameraComponent->bUsePawnControlRotation = false;	// Camera does not rotate relative to arm
 
 
-
-	
 	// Movement
 	MoveSpeed = 1000.0f;
 	// Weapon
@@ -65,11 +60,11 @@ AGalaga_USFX_LAB02Pawn::AGalaga_USFX_LAB02Pawn()
 
 	//Teleport al respawn Spawn
 	SetActorLocation(FVector(-885.0f, -122.0f, 200.0f));// posicion inicial del jugador  
-	posicionInicial = GetActorLocation(); 
+	posicionInicial = GetActorLocation();
 	PlayerInputEnabled = true;
-	
-	
-	
+
+
+
 }
 
 void AGalaga_USFX_LAB02Pawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -82,12 +77,12 @@ void AGalaga_USFX_LAB02Pawn::SetupPlayerInputComponent(class UInputComponent* Pl
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
 
-	
-	 // Define la acción "Teleport" y vincula la tecla "T" a ella
-	 FInputActionKeyMapping Teleport("Teleport", EKeys::T); 
-	 UPlayerInput::AddEngineDefinedActionMapping(Teleport); 
-	 PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport); 
-	 // Vincula la acción "Teleport" a la función de teletransporte de tu Pawn
+
+	// Define la acción "Teleport" y vincula la tecla "T" a ella
+	FInputActionKeyMapping Teleport("Teleport", EKeys::T);
+	UPlayerInput::AddEngineDefinedActionMapping(Teleport);
+	PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport);
+	// Vincula la acción "Teleport" a la función de teletransporte de tu Pawn
 }
 
 void AGalaga_USFX_LAB02Pawn::Tick(float DeltaSeconds)
@@ -96,7 +91,7 @@ void AGalaga_USFX_LAB02Pawn::Tick(float DeltaSeconds)
 	{
 		// Agrega aquí la lógica para mover el Pawn de manera loca en x y y
 		FVector NewLocation = GetActorLocation() + FVector(FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(0.0f, 0.0f)) * DeltaSeconds;
-		SetActorLocation(NewLocation); 
+		SetActorLocation(NewLocation);
 	}
 	if (PlayerInputEnabled)
 	{
@@ -174,36 +169,9 @@ void AGalaga_USFX_LAB02Pawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
-
-
-void AGalaga_USFX_LAB02Pawn::recibirImpacto()
-{
-	ContImpacto++;
-
-	// Verificar si el pawn debe ser destruido
-	CheckDestroy();
-}
-
-void AGalaga_USFX_LAB02Pawn::CheckDestroy()
-{
-	if (ContImpacto == 3) 
-	{
-		FString Message = FString::Printf(TEXT("GAME OVER"));
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, Message);
-
-		Destroy(); 
-
-	}
-}
-
-void AGalaga_USFX_LAB02Pawn::Jump()
-{
-
-}
-
 void AGalaga_USFX_LAB02Pawn::Teleport()
 {
-	SetActorLocation(posicionInicial);   
+	SetActorLocation(posicionInicial);
 }
 
 void AGalaga_USFX_LAB02Pawn::Energia()
@@ -214,8 +182,8 @@ void AGalaga_USFX_LAB02Pawn::Energia()
 
 void AGalaga_USFX_LAB02Pawn::BeginPlay()
 {
-		Super::BeginPlay();
-		
+	Super::BeginPlay();
+
 }
 
 void AGalaga_USFX_LAB02Pawn::MoveCrazy()
@@ -233,6 +201,34 @@ void AGalaga_USFX_LAB02Pawn::EndMoveCrazy()
 void AGalaga_USFX_LAB02Pawn::SetPlayerInputEnabled(bool Activo)
 {
 	PlayerInputEnabled = Activo;
+}
+
+void AGalaga_USFX_LAB02Pawn::RecibirImpacto()
+{
+	//ReducirVida();
+	CheckDestroy();
+}
+
+void AGalaga_USFX_LAB02Pawn::AumentarVida()
+{
+	VidasRestantes++;
+}
+
+void AGalaga_USFX_LAB02Pawn::ReducirVida()
+{
+	if (VidasRestantes > 0)
+	{
+		VidasRestantes--;
+	}
+}
+
+void AGalaga_USFX_LAB02Pawn::CheckDestroy()
+{
+	if (VidasRestantes <= 0)
+	{
+		// Código para destruir el pawn, por ejemplo:
+		Destroy();
+	}
 }
 
 

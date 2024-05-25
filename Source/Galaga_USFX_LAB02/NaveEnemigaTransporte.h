@@ -22,7 +22,8 @@ protected:
 	float Speed = 20.0f;
 	// Called when the game starts or when spawned
 	FString tipoNave = "Transporte";
-	virtual void FireProjectile() ;
+
+	virtual void FireProjectile() override; 
 	//void FireAliens();
 
 private:

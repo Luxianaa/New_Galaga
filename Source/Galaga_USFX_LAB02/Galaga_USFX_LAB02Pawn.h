@@ -23,15 +23,13 @@ class AGalaga_USFX_LAB02Pawn : public APawn
 	UPROPERTY(Category = Camera, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
-
-
 public:
 	AGalaga_USFX_LAB02Pawn();
 
 	/** Offset from the ships location to spawn projectiles */
-	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite )
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	FVector GunOffset;
-	
+
 	/* How fast the weapon will fire */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	float FireRate;
@@ -77,42 +75,50 @@ public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
-	
+
 
 protected:
 	int ContImpacto;
 public:
-	void recibirImpacto();	
-	void CheckDestroy();
-	int VidasRestantes = 3;
+	//void recibirImpacto();	
+	//void CheckDestroy();
+	//int VidasRestantes = 3;
 
-	int GetVidasRestantes() const { return VidasRestantes; }
-	void AumentarVida()
-	{ 
-		if (VidasRestantes > 0)
-		VidasRestantes++;
-	}	
-	// Función para reducir una vida del pawn
-	void ReducirVida() 
-	{ 
-		if (VidasRestantes > 0)
-			VidasRestantes--;
-	}
-	void Jump();
+	//int GetVidasRestantes() const { return VidasRestantes; }
+	//void AumentarVida()
+	//{ 
+	//	if (VidasRestantes > 0)
+	//	VidasRestantes++;
+	//}	
+	//// Función para reducir una vida del pawn
+	//void ReducirVida() 
+	//{ 
+	//	if (VidasRestantes > 0)
+	//		VidasRestantes--;
+	//}
 	void Teleport();
 	FVector posicionInicial;
-	void Energia();	 
+	void Energia();
 	FTimerHandle TimerHandle_Energia;
 
 	virtual void BeginPlay() override;
-public:
 
+public:
 	bool MovingCrazy; //Para saber si se esta moviendo loco
 	FTimerHandle CrazyMove;
 	bool PlayerInputEnabled; //Para que no se pueda mover mientras se mueve loco
 	void MoveCrazy();
-	void EndMoveCrazy(); 
-	void SetPlayerInputEnabled(bool Activo); 
-	//void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
+	void EndMoveCrazy();
+	void SetPlayerInputEnabled(bool Activo);
+public:
+	void RecibirImpacto();
+	int GetVidasRestantes() const { return VidasRestantes; }
+	void AumentarVida();
+
+public:
+	void ReducirVida();
+	void CheckDestroy();
+
+	int VidasRestantes = 3;
 };
 

@@ -77,9 +77,7 @@ void EmptyLinkFunctionForGeneratedCodeFactoryCapsula() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas_Statics::Function_MetaDataParams[] = {
 		{ "Category", "FabricaCapsulas" },
-		{ "Comment", "// Sets default values for this actor's properties\n//AFactoryCapsula();\n//virtual void Mostrar() = 0; \n" },
 		{ "ModuleRelativePath", "FactoryCapsula.h" },
-		{ "ToolTip", "Sets default values for this actor's properties\nAFactoryCapsula();\nvirtual void Mostrar() = 0;" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFactoryCapsula, nullptr, "GenerarCapsulas", nullptr, nullptr, sizeof(FactoryCapsula_eventGenerarCapsulas_Parms), Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04822401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas_Statics::Function_MetaDataParams)) };
@@ -111,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeFactoryCapsula() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Galaga_USFX_LAB02,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFactoryCapsula_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas, "GenerarCapsulas" }, // 1404282631
+		{ &Z_Construct_UFunction_AFactoryCapsula_GenerarCapsulas, "GenerarCapsulas" }, // 359017841
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFactoryCapsula_Statics::Class_MetaDataParams[] = {
@@ -146,7 +144,7 @@ void EmptyLinkFunctionForGeneratedCodeFactoryCapsula() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFactoryCapsula, 3940995786);
+	IMPLEMENT_CLASS(AFactoryCapsula, 1057773302);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AFactoryCapsula>()
 	{
 		return AFactoryCapsula::StaticClass();

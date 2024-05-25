@@ -137,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACapsulaVida_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *\n */" },
 		{ "IncludePath", "CapsulaVida.h" },
 		{ "ModuleRelativePath", "CapsulaVida.h" },
 	};
@@ -169,7 +169,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACapsulaVida, 4062600159);
+	IMPLEMENT_CLASS(ACapsulaVida, 2337820898);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<ACapsulaVida>()
 	{
 		return ACapsulaVida::StaticClass();

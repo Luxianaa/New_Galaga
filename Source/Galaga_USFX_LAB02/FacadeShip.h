@@ -10,8 +10,8 @@ UCLASS()
 class GALAGA_USFX_LAB02_API AFacadeShip : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AFacadeShip();
 
@@ -20,7 +20,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(VisibleAnywhere, Category = "Ships")
-	class AShipRager* ShipRager;
+	class ANaveEnemiga* NaveEnemiga;
 
 
 public:
@@ -29,7 +29,12 @@ public:
 	void SpawnShipsLevel1();
 	void SpawnShipsLevel2();
 	void SpawnCapsules();
-	void SpawnRagerShips(); 
-	FTimerHandle SpawnTimerHandle;
-
+	void SpawnRagerShips();
+	FTimerHandle SpawnTimerHandle; 
+	void CollideProjectile(AActor* OtherActor);//pawn a NE
+	void CollideShield(AActor* OtherActor);//MOthership
+	void CollideCrazyCapsule(AActor* OtherActor); //pawn
+	void CollideEnergyCapsule(AActor* OtherActor); //pawn	
+	void CollideEnemyProjectile(AActor* OtherActor); //pawn
+	void CollideLifeCapsule(AActor* OtherActor); //pawn
 };

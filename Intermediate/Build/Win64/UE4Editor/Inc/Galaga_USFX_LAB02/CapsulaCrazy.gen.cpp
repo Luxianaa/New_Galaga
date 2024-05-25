@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaCrazy() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AFacadeShip_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ACapsulaCrazy::execOnHit)
 	{
@@ -130,6 +131,10 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaCrazy() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FacadeShip_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FacadeShip;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -143,7 +148,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaCrazy() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACapsulaCrazy_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *\n */" },
 		{ "IncludePath", "CapsulaCrazy.h" },
 		{ "ModuleRelativePath", "CapsulaCrazy.h" },
 	};
@@ -157,8 +162,16 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaCrazy() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACapsulaCrazy, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_ProjectileMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_ProjectileMovement_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_FacadeShip_MetaData[] = {
+		{ "Category", "Facade" },
+		{ "ModuleRelativePath", "CapsulaCrazy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_FacadeShip = { "FacadeShip", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACapsulaCrazy, FacadeShip), Z_Construct_UClass_AFacadeShip_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_FacadeShip_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_FacadeShip_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACapsulaCrazy_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_ProjectileMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACapsulaCrazy_Statics::NewProp_FacadeShip,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACapsulaCrazy_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACapsulaCrazy>::IsAbstract,
@@ -187,7 +200,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaCrazy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACapsulaCrazy, 2468243931);
+	IMPLEMENT_CLASS(ACapsulaCrazy, 638507994);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<ACapsulaCrazy>()
 	{
 		return ACapsulaCrazy::StaticClass();

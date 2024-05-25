@@ -14,14 +14,11 @@ class GALAGA_USFX_LAB02_API AFactoryCapsula : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	//AFactoryCapsula();
-	//virtual void Mostrar() = 0; 
+	AFactoryCapsula();
 	UFUNCTION(BlueprintCallable, Category = "FabricaCapsulas")
 	static ACapsula* GenerarCapsulas(FString tipoCapsula, UWorld* World, FVector SpawnLocation, FRotator ZeroRotator); //Factory Method
 	//llamar sin crear obj  
-	// 
-	//virtual ACapsula* GenerarCapsulas(FString tipoCapsula, UWorld* world, )
-	//PURE_VIRTUAL(AFactoryCapsula::GenerarCapsulas, return nullptr;); 
+
 
 protected:
 	// Called when the game starts or when spawned

@@ -13,19 +13,9 @@ C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/Capsula.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/Capsula.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Capsula.generated.h
-C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/CapsulaCrazy.gen.cpp
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/CapsulaCrazy.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CapsulaCrazy.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/CapsulaEnergia.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/CapsulaEnergia.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CapsulaEnergia.generated.h
-C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/CapsulaVida.gen.cpp
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/CapsulaVida.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CapsulaVida.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/DoomMotherShip.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/DoomMotherShip.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IBuilderMotherShip.h
@@ -38,12 +28,6 @@ C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/FacadeScore.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/FacadeScore.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\FacadeScore.generated.h
-C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/FacadeShip.gen.cpp
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/FacadeShip.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\FacadeShip.generated.h
-C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/FactoryCapsula.gen.cpp
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/FactoryCapsula.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\FactoryCapsula.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/FactoryShip.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/FactoryShip.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\NaveEnemiga.h
@@ -70,15 +54,15 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Galaga_USFX_LAB02Pawn.generated.h
-C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/Galaga_USFX_LAB02Projectile.gen.cpp
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/Galaga_USFX_LAB02Projectile.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Galaga_USFX_LAB02Projectile.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/IAbsFactory.gen.cpp
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/IBuilderMotherShip.gen.cpp
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/ISetMotherShip.gen.cpp
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MeshMotherShip.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MeshMotherShip.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MeshMotherShip.generated.h
+C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/Moon.gen.cpp
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/Moon.h
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Moon.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MotherDirector.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MotherDirector.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MotherDirector.generated.h
@@ -88,6 +72,10 @@ C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Motor.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MShipProjectile.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MShipProjectile.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MShipProjectile.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/NasMotherShip.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/NasMotherShip.h

@@ -7,13 +7,12 @@
 #include "CapsulaCrazy.h"
 
 // Sets default values
-//AFactoryCapsula::AFactoryCapsula()
-//{
-// 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-//	PrimaryActorTick.bCanEverTick = true;
-//
-//}
-//FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
+AFactoryCapsula::AFactoryCapsula()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+}
 
 ACapsula* AFactoryCapsula::GenerarCapsulas(FString tipoCapsula, UWorld* World, FVector SpawnLocation, FRotator SpawnRotation)
 {
@@ -22,21 +21,21 @@ ACapsula* AFactoryCapsula::GenerarCapsulas(FString tipoCapsula, UWorld* World, F
 	{
 		ACapsulaEnergia* CapsulaEnergia = World->SpawnActor<ACapsulaEnergia>(SpawnLocat, SpawnRotation); 
 
-		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Generando Capsula de Energia"));
+		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Capsula Energia"));
 		return CapsulaEnergia; 
 	}
 	else if (tipoCapsula == "Vida")
 	{
 		ACapsulaVida* CapsulaVida = World->SpawnActor<ACapsulaVida>(SpawnLocat, SpawnRotation);
 
-		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Generando Capsula de Vida")); 
+		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Capsula Vida"));
 		return CapsulaVida; 
 	}
 	else if (tipoCapsula == "Crazy")
 	{
 		ACapsulaCrazy* CapsulaCrazy = World->SpawnActor<ACapsulaCrazy>(SpawnLocat, SpawnRotation);
 
-		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Generando Capsula Crazy")); 
+		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Capsula Crazy"));
 		return CapsulaCrazy; 
 	}
 	return nullptr;

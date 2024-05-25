@@ -71,7 +71,8 @@ public: \
 
 
 #define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_CapsulaCrazy_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(ACapsulaCrazy, ProjectileMovement); }
+	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(ACapsulaCrazy, ProjectileMovement); } \
+	FORCEINLINE static uint32 __PPO__FacadeShip() { return STRUCT_OFFSET(ACapsulaCrazy, FacadeShip); }
 
 
 #define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_CapsulaCrazy_h_13_PROLOG

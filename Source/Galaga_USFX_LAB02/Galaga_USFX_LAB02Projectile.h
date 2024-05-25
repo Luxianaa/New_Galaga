@@ -9,7 +9,7 @@
 class UProjectileMovementComponent;
 class UStaticMeshComponent;
 
-UCLASS(config=Game)
+UCLASS(config = Game)
 class AGalaga_USFX_LAB02Projectile : public AActor
 {
 	GENERATED_BODY()
@@ -21,12 +21,12 @@ class AGalaga_USFX_LAB02Projectile : public AActor
 	/** Projectile movement component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 	UProjectileMovementComponent* ProjectileMovement;
-
 	UPROPERTY(EditAnywhere)
 	UParticleSystemComponent* ParticleSystemComponent;
+
 public:
 	AGalaga_USFX_LAB02Projectile();
-	
+
 
 	/** Function to handle the projectile hitting something */
 	UFUNCTION()
@@ -39,7 +39,7 @@ public:
 	UParticleSystem* ExplosionParticleSystem;
 
 	UPROPERTY(EditAnywhere, Category = "Colision")
-		class AFacadeScore* FacadeScore; //Facade
-		
+	class AFacadeShip* FacadeShip;
+
 };
 

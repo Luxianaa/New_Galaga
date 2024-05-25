@@ -9,6 +9,7 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "UObject/ConstructorHelpers.h"
+#include "FacadeShip.h"
 
 
 // Sets default values
@@ -60,22 +61,7 @@ void AProyectilEnemigo::Fire()
 
 void AProyectilEnemigo::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 { 
-
-	AGalaga_USFX_LAB02Pawn* Pawn = Cast<AGalaga_USFX_LAB02Pawn>(OtherActor);
-	if (Pawn)
-	{
-
-		Pawn->ReducirVida();
-
-		// Mostrar un mensaje informando al jugador sobre la pérdida de vida
-		FString Message = FString::Printf(TEXT("Vidas restantes: %d "), Pawn->GetVidasRestantes());
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, Message);
-		//PawnScore += ScorePorEnemigo;
-
-
-		// Llamar a la función destruir de la nave enemiga
-		Pawn->recibirImpacto();
-	}
+	FacadeShip->CollideEnemyProjectile(OtherActor);
 	if (ParticleSystemComponent) 
 	{ 
 		ParticleSystemComponent->Activate(); 

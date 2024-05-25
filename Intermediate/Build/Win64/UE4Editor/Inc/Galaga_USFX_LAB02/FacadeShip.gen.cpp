@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeFacadeShip() {}
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AFacadeShip();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_LAB02();
-	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AShipRager_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ANaveEnemiga_NoRegister();
 // End Cross Module References
 	void AFacadeShip::StaticRegisterNativesAFacadeShip()
 	{
@@ -33,9 +33,9 @@ void EmptyLinkFunctionForGeneratedCodeFacadeShip() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShipRager_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NaveEnemiga_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ShipRager;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NaveEnemiga;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -51,14 +51,14 @@ void EmptyLinkFunctionForGeneratedCodeFacadeShip() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFacadeShip_Statics::NewProp_ShipRager_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFacadeShip_Statics::NewProp_NaveEnemiga_MetaData[] = {
 		{ "Category", "Ships" },
 		{ "ModuleRelativePath", "FacadeShip.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFacadeShip_Statics::NewProp_ShipRager = { "ShipRager", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFacadeShip, ShipRager), Z_Construct_UClass_AShipRager_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFacadeShip_Statics::NewProp_ShipRager_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFacadeShip_Statics::NewProp_ShipRager_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFacadeShip_Statics::NewProp_NaveEnemiga = { "NaveEnemiga", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFacadeShip, NaveEnemiga), Z_Construct_UClass_ANaveEnemiga_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFacadeShip_Statics::NewProp_NaveEnemiga_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFacadeShip_Statics::NewProp_NaveEnemiga_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFacadeShip_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFacadeShip_Statics::NewProp_ShipRager,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFacadeShip_Statics::NewProp_NaveEnemiga,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFacadeShip_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFacadeShip>::IsAbstract,
@@ -87,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeFacadeShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFacadeShip, 1906205658);
+	IMPLEMENT_CLASS(AFacadeShip, 1012772479);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AFacadeShip>()
 	{
 		return AFacadeShip::StaticClass();

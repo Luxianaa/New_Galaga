@@ -8,7 +8,7 @@
 #include "CapsulaCrazy.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class GALAGA_USFX_LAB02_API ACapsulaCrazy : public ACapsula
@@ -16,8 +16,10 @@ class GALAGA_USFX_LAB02_API ACapsulaCrazy : public ACapsula
 	GENERATED_BODY()
 
 private:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true")) 
-	UProjectileMovementComponent* ProjectileMovement; 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
+	UProjectileMovementComponent* ProjectileMovement;
+	UPROPERTY(VisibleAnywhere, Category = "Facade")
+	class AFacadeShip* FacadeShip;
 public:
 	ACapsulaCrazy();
 	FString tipoCapsula = "Crazy";
@@ -25,5 +27,5 @@ public:
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 	void FireCpasule();
 	void FireInDirection(const FVector& ShootDirection);
-	
+
 };
