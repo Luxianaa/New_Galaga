@@ -2,7 +2,7 @@
 
 
 #include "ShipYorke.h"
-#include "Galaga_USFX_LAB02Projectile.h"
+#include "YorkProjectile.h"
 
 // Sets default values
 AShipYorke::AShipYorke()
@@ -14,13 +14,14 @@ AShipYorke::AShipYorke()
 	ShipYorke->SetupAttachment(RootComponent);
 	ShipYorke->SetStaticMesh(meshYorke.Object);
 	RootComponent = ShipYorke;
+	FireRate = 1.0f;
 }
 
 // Called when the game starts or when spawned
 void AShipYorke::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	GetWorld()->GetTimerManager().SetTimer(FireTimerHandle, this, &AShipYorke::FireProjectile, FireRate, true); 
 }
 
 // Called every frame
@@ -30,21 +31,22 @@ void AShipYorke::Tick(float DeltaTime)
 
 }
 
-void AShipYorke::Fire()
+void AShipYorke::FireProjectile()
 {
-	AGalaga_USFX_LAB02Projectile* Projectile = GetWorld()->SpawnActor<AGalaga_USFX_LAB02Projectile>(AGalaga_USFX_LAB02Projectile::StaticClass(), GetActorLocation(), GetActorRotation());
+	AYorkProjectile* Projectile = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), GetActorLocation(), GetActorRotation());
 	if (Projectile)
 	{
 		//Obtén la dirección hacia adelante de la nave enemiga
-		FVector ForwardDirection = GetActorForwardVector(); 
+		FVector ForwardDirection = GetActorForwardVector();
 
-		// Calcula la rotación basada en la dirección hacia adelante 
-		FRotator SpawnRotation = ForwardDirection.Rotation(); 
+		// Calcula la rotación basada en la dirección hacia adelante
+		FRotator SpawnRotation = ForwardDirection.Rotation();
 
 		// Configura la posición y dirección del proyectil
-		FVector SpawnLocation = GetActorLocation(); 
-		Projectile->SetActorLocationAndRotation(SpawnLocation, SpawnRotation); 
-		
+		FVector SpawnLocation = GetActorLocation();
+		Projectile->SetActorLocationAndRotation(SpawnLocation, SpawnRotation);
+		Projectile->Fire(); 
 	}
 }
+
 

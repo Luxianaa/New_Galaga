@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "UObject/ConstructorHelpers.h"
 #include "FacadeShip.h"
+#include "ShipYorke.h"
 
 
 // Sets default values
@@ -72,6 +73,11 @@ void AProyectilEnemigo::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, 
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
 	Destroy();
+	AShipYorke* ShipYorke = Cast<AShipYorke>(OtherActor);
+	if (ShipYorke)
+	{
+		ShipYorke->Destroy();
+	}
 }
 
 // Called when the game starts or when spawned
