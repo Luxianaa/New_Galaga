@@ -13,7 +13,14 @@ UCLASS()
 class GALAGA_USFX_LAB02_API ANaveEnemigaTransporteLv1 : public ANaveEnemigaTransporte
 {
 	GENERATED_BODY()
+public:
+	ANaveEnemigaTransporteLv1();
 
 	FString tipoNave = "TransporteLv1";
+
+	class UAComponenteMovimiento* componenteMovimiento;  
+public:
+		// Called every frame
+		virtual void Tick(float DeltaTime) override;
 	
 };

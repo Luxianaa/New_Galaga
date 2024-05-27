@@ -114,31 +114,31 @@ void AFacadeShip::SpawnShipsLevel2()
 		FVector ubicacionActual = ubicacionInicialNaves;
 
 		ubicacionActual.X = ubicacionInicialNaves2.X - 250.0f;
-		for (int i = 0; i < 1; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * i;
 			factory->CreateShips("CazaLv1", World, ubicacionActual, rotacionNave);
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 500.0f;
-		for (int j = 0; j < 6; j++)
+		for (int j = 0; j < 20; j++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * j;
 			factory->CreateShips("HackerLv1", World, ubicacionActual, rotacionNave);
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 750.0f;
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 20; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * i;
 			factory->CreateShips("EspiaLv1", World, ubicacionActual, rotacionNave);
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 1000.0f;
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < 20; j++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * j;
 			factory->CreateShips("BigPoppaLv1", World, ubicacionActual, rotacionNave);
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 1250.0f;
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 20; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * i;
 			factory->CreateShips("TransporteLv1", World, ubicacionActual, rotacionNave);
@@ -248,7 +248,7 @@ void AFacadeShip::CollideEnemyProjectile(AActor* OtherActor)
 	AGalaga_USFX_LAB02Pawn* Pawn = Cast<AGalaga_USFX_LAB02Pawn>(OtherActor);
 	if (Pawn)
 	{
-		
+		Pawn->RecibirImpacto();
 		// Mostrar un mensaje informando al jugador sobre la pérdida de vida
 		FString Message = FString::Printf(TEXT("Vidas restantes: %d "), Pawn->GetVidasRestantes());
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Magenta, Message);

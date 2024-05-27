@@ -17,6 +17,7 @@ public:
 		ANaveEnemigaCazaLv1();
 protected:
 	// Called when the game starts or when spawned
+	class UAComponenteMovimiento* componenteMovimiento;
 	virtual void BeginPlay() override;
 
 	void Tick(float DeltaTime) override;

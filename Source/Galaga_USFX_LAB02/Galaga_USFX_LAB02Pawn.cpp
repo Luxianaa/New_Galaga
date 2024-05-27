@@ -16,6 +16,7 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "CapsulaCrazy.h"
+#include "ISubscriber.h"
 
 const FName AGalaga_USFX_LAB02Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_LAB02Pawn::MoveRightBinding("MoveRight");
@@ -62,8 +63,6 @@ AGalaga_USFX_LAB02Pawn::AGalaga_USFX_LAB02Pawn()
 	SetActorLocation(FVector(-885.0f, -122.0f, 200.0f));// posicion inicial del jugador  
 	posicionInicial = GetActorLocation();
 	PlayerInputEnabled = true;
-
-
 
 }
 
@@ -205,7 +204,7 @@ void AGalaga_USFX_LAB02Pawn::SetPlayerInputEnabled(bool Activo)
 
 void AGalaga_USFX_LAB02Pawn::RecibirImpacto()
 {
-	//ReducirVida();
+	ReducirVida();
 	CheckDestroy();
 }
 
@@ -230,9 +229,3 @@ void AGalaga_USFX_LAB02Pawn::CheckDestroy()
 		Destroy();
 	}
 }
-
-
-
-
-
-

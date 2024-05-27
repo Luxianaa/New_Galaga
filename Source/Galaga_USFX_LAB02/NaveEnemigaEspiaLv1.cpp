@@ -2,11 +2,13 @@
 
 
 #include "NaveEnemigaEspiaLv1.h"
+#include "AComponenteMovimiento.h"
 
 ANaveEnemigaEspiaLv1::ANaveEnemigaEspiaLv1()
 {
     PrimaryActorTick.bCanEverTick = true;
 
+    componenteMovimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("ComponenteMovimiento"));
 
 
 }

@@ -17,6 +17,7 @@ public:
 	ANaveEnemigaEspiaLv1();
 
 	FString tipoNave = "EspiaLv1";  
+	class UAComponenteMovimiento* componenteMovimiento;
 
 public:
 

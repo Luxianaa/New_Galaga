@@ -80,22 +80,6 @@ public:
 protected:
 	int ContImpacto;
 public:
-	//void recibirImpacto();	
-	//void CheckDestroy();
-	//int VidasRestantes = 3;
-
-	//int GetVidasRestantes() const { return VidasRestantes; }
-	//void AumentarVida()
-	//{ 
-	//	if (VidasRestantes > 0)
-	//	VidasRestantes++;
-	//}	
-	//// Función para reducir una vida del pawn
-	//void ReducirVida() 
-	//{ 
-	//	if (VidasRestantes > 0)
-	//		VidasRestantes--;
-	//}
 	void Teleport();
 	FVector posicionInicial;
 	void Energia();
@@ -120,5 +104,13 @@ public:
 	void CheckDestroy();
 
 	int VidasRestantes = 3;
+//private:
+//	UPROPERTY(VisibleAnywhere, Category = "PawnPublisher")
+//	TArray<AActor*> Subscribers; 
+//	class IISubscriber* ISubscriber;
+//public:
+//	virtual void AddSubscriber(AActor* _Subscriber);
+//	virtual void RemoveSubscriber(AActor* _Subscriber);
+//	virtual void NotifySubscribers();
 };
 

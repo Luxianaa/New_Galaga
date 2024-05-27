@@ -31,3 +31,5 @@ C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MotherDirector.generated.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\FacadeShip.h
 C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\FacadeShip.generated.h
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\Moon.h
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Moon.generated.h

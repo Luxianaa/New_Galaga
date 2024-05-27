@@ -2,6 +2,7 @@
 
 
 #include "Moon.h"
+#include "Galaga_USFX_LAB02Pawn.h"
 
 // Sets default values
 AMoon::AMoon()
@@ -19,7 +20,7 @@ AMoon::AMoon()
 // Called when the game starts or when spawned
 void AMoon::BeginPlay()
 {
-	Super::BeginPlay();
+	Super::BeginPlay();	
 	
 }
 
@@ -29,4 +30,6 @@ void AMoon::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+
 

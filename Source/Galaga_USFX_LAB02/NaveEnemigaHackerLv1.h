@@ -15,7 +15,11 @@ class GALAGA_USFX_LAB02_API ANaveEnemigaHackerLv1 : public ANaveEnemigaHacker
 	GENERATED_BODY()
 public:
 	ANaveEnemigaHackerLv1();
+	class UAComponenteMovimiento* componenteMovimiento;
 	
 protected:
 	FString tipoNave ="hackerLv1";
+public:
+	// Called every frame
+		virtual void Tick(float DeltaTime) override;
 };
