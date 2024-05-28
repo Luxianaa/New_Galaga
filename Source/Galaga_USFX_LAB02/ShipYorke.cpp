@@ -2,7 +2,11 @@
 
 
 #include "ShipYorke.h"
+#include "AComponenteMovimiento.h"
 #include "YorkProjectile.h"
+#include "Components/StaticMeshComponent.h"
+#include "TimerManager.h"
+#include "UObject/ConstructorHelpers.h"
 
 // Sets default values
 AShipYorke::AShipYorke()
@@ -14,13 +18,19 @@ AShipYorke::AShipYorke()
 	ShipYorke->SetupAttachment(RootComponent);
 	ShipYorke->SetStaticMesh(meshYorke.Object);
 	RootComponent = ShipYorke;
+	//SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
+	ComponenteMovimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("MovimientoNavesComponente"));
 	FireRate = 1.0f;
+
+	Vida = 5;
+	Vida= VidaMaxima;
 }
 
 // Called when the game starts or when spawned
 void AShipYorke::BeginPlay()
 {
 	Super::BeginPlay();
+
 	GetWorld()->GetTimerManager().SetTimer(FireTimerHandle, this, &AShipYorke::FireProjectile, FireRate, true); 
 }
 
@@ -49,4 +59,27 @@ void AShipYorke::FireProjectile()
 	}
 }
 
-
+//void AShipYorke::Subscribe(IISubscriber* subscriber)
+//{
+//	Subscribers.Add(subscriber);
+//}
+//void AShipYorke::Unsubscribe(IISubscriber* subscriber)
+//{
+//	Subscribers.Remove(subscriber);
+//}
+//void AShipYorke::Notify()
+//{
+//	for (IISubscriber* subscriber : Subscribers) 
+//	{
+//		subscriber->Auxiliar(this);
+//	}
+//}
+//
+//void AShipYorke::GetDamage(int Damage)
+//{
+//	Vida -= Damage;
+//	if(Vida<=1)
+//	{
+//		Notify();
+//	}
+//}

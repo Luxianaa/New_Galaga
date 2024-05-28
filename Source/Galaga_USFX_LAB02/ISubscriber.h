@@ -21,6 +21,4 @@ class GALAGA_USFX_LAB02_API IISubscriber
 	GENERATED_BODY()
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
-public:
-		virtual void Update(class APublisher* Publisher) = 0;
 };

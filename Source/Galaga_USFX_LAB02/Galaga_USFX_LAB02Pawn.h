@@ -102,15 +102,6 @@ public:
 public:
 	void ReducirVida();
 	void CheckDestroy();
-
 	int VidasRestantes = 3;
-//private:
-//	UPROPERTY(VisibleAnywhere, Category = "PawnPublisher")
-//	TArray<AActor*> Subscribers; 
-//	class IISubscriber* ISubscriber;
-//public:
-//	virtual void AddSubscriber(AActor* _Subscriber);
-//	virtual void RemoveSubscriber(AActor* _Subscriber);
-//	virtual void NotifySubscribers();
 };
 

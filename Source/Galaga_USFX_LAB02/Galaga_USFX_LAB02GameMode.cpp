@@ -9,6 +9,8 @@
 #include "MotherDirector.h"
 #include "FacadeShip.h" 
 #include "Moon.h"
+#include "Kismet/GameplayStatics.h"
+
 
 AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
 {
