@@ -18,7 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeMoon() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_LAB02();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AGalaga_USFX_LAB02Pawn_NoRegister();
 // End Cross Module References
 	void AMoon::StaticRegisterNativesAMoon()
 	{
@@ -37,10 +36,6 @@ void EmptyLinkFunctionForGeneratedCodeMoon() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_mallamoon_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_mallamoon;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Pawn_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Pawn;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -64,16 +59,8 @@ void EmptyLinkFunctionForGeneratedCodeMoon() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMoon_Statics::NewProp_mallamoon = { "mallamoon", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMoon, mallamoon), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMoon_Statics::NewProp_mallamoon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMoon_Statics::NewProp_mallamoon_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMoon_Statics::NewProp_Pawn_MetaData[] = {
-		{ "Category", "Subscriptor" },
-		{ "ModuleRelativePath", "Moon.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMoon_Statics::NewProp_Pawn = { "Pawn", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMoon, Pawn), Z_Construct_UClass_AGalaga_USFX_LAB02Pawn_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMoon_Statics::NewProp_Pawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMoon_Statics::NewProp_Pawn_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMoon_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMoon_Statics::NewProp_mallamoon,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMoon_Statics::NewProp_Pawn,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMoon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMoon>::IsAbstract,
@@ -102,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeMoon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMoon, 1727454031);
+	IMPLEMENT_CLASS(AMoon, 3293390704);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AMoon>()
 	{
 		return AMoon::StaticClass();

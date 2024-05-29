@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeShipYorke() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_LAB02();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_UIObserver_NoRegister();
 // End Cross Module References
 	void AShipYorke::StaticRegisterNativesAShipYorke()
 	{
@@ -37,6 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeShipYorke() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ShipYorke;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -62,6 +64,9 @@ void EmptyLinkFunctionForGeneratedCodeShipYorke() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShipYorke_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShipYorke_Statics::NewProp_ShipYorke,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AShipYorke_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIObserver_NoRegister, (int32)VTABLE_OFFSET(AShipYorke, IIObserver), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AShipYorke_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AShipYorke>::IsAbstract,
 	};
@@ -72,11 +77,11 @@ void EmptyLinkFunctionForGeneratedCodeShipYorke() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_AShipYorke_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AShipYorke_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AShipYorke_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AShipYorke_Statics::Class_MetaDataParams))
 	};
@@ -89,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeShipYorke() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AShipYorke, 2824412957);
+	IMPLEMENT_CLASS(AShipYorke, 1821400817);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AShipYorke>()
 	{
 		return AShipYorke::StaticClass();

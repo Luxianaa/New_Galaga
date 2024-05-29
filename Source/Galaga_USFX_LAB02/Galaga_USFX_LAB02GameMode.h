@@ -31,6 +31,10 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "FacadeShip")
 	class AFacadeShip* FacadeShip;
 	FTimerHandle SpawnTimerHandle;
+	//----------------------
+	class AMoon* Moon; //obs
+	class AShipYorke* ShipYorke;//sub
+	class APublisher* Publisher;
 };
 
 

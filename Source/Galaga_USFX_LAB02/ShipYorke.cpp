@@ -6,6 +6,8 @@
 #include "YorkProjectile.h"
 #include "Components/StaticMeshComponent.h"
 #include "TimerManager.h"
+#include "Publisher.h"
+//#include "Kismet/GameplayStatics.h"
 #include "UObject/ConstructorHelpers.h"
 
 // Sets default values
@@ -21,9 +23,9 @@ AShipYorke::AShipYorke()
 	//SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
 	ComponenteMovimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("MovimientoNavesComponente"));
 	FireRate = 1.0f;
+	Vida = 3;
+	bIsDoubleFiring = false;
 
-	Vida = 5;
-	Vida= VidaMaxima;
 }
 
 // Called when the game starts or when spawned
@@ -43,43 +45,94 @@ void AShipYorke::Tick(float DeltaTime)
 
 void AShipYorke::FireProjectile()
 {
-	AYorkProjectile* Projectile = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), GetActorLocation(), GetActorRotation());
-	if (Projectile)
+	FVector Offset1 = FVector(50.0f, -30.0f, 0.0f); // Offset para el primer proyectil
+	  // Offset para el segundo proyectil
+
+	// Obtén la dirección hacia adelante de la nave
+	FVector ForwardDirection = GetActorForwardVector();
+
+	// Calcula la rotación basada en la dirección hacia adelante
+	FRotator SpawnRotation = ForwardDirection.Rotation();
+
+	// Configura la posición y dirección del primer proyectil
+	FVector SpawnLocation1 = GetActorLocation() + GetActorForwardVector() * Offset1.X + GetActorRightVector() * Offset1.Y + GetActorUpVector() * Offset1.Z;
+	AYorkProjectile* Projectile1 = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), SpawnLocation1, SpawnRotation);
+	if (Projectile1)
 	{
-		//Obtén la dirección hacia adelante de la nave enemiga
-		FVector ForwardDirection = GetActorForwardVector();
-
-		// Calcula la rotación basada en la dirección hacia adelante
-		FRotator SpawnRotation = ForwardDirection.Rotation();
-
-		// Configura la posición y dirección del proyectil
-		FVector SpawnLocation = GetActorLocation();
-		Projectile->SetActorLocationAndRotation(SpawnLocation, SpawnRotation);
-		Projectile->Fire(); 
+		Projectile1->Fire();
 	}
 }
 
-//void AShipYorke::Subscribe(IISubscriber* subscriber)
-//{
-//	Subscribers.Add(subscriber);
-//}
-//void AShipYorke::Unsubscribe(IISubscriber* subscriber)
-//{
-//	Subscribers.Remove(subscriber);
-//}
-//void AShipYorke::Notify()
-//{
-//	for (IISubscriber* subscriber : Subscribers) 
-//	{
-//		subscriber->Auxiliar(this);
-//	}
-//}
-//
-//void AShipYorke::GetDamage(int Damage)
-//{
-//	Vida -= Damage;
-//	if(Vida<=1)
-//	{
-//		Notify();
-//	}
-//}
+void AShipYorke::GetDamage()
+{
+	if (Vida <= 0) 
+	{
+		Destroy(); 
+	} 
+}
+
+void AShipYorke::Update()
+{
+	if (!bIsDoubleFiring) //si no esta disparando doble
+	{
+		DoubleFire(); 
+		bIsDoubleFiring = true;
+	}
+	else if (bIsDoubleFiring) //si esta disparando doble
+	{
+		bIsDoubleFiring = false; 
+	}
+}
+
+void AShipYorke::DestroySubs()
+{
+	Publisher->RemoveObserver(this);
+	Destroy(); //le dara un ataque cardiaco
+}
+
+void AShipYorke::DoubleFire()
+{
+	FVector Offset1 = FVector(50.0f, -30.0f, 0.0f); 
+	FVector Offset2 = FVector(50.0f, 30.0f, 0.0f); // Offset para el segundo proyectil
+	FVector ForwardDirection = GetActorForwardVector();
+	FRotator SpawnRotation = ForwardDirection.Rotation();
+
+	// Configura la posición y dirección del segundo proyectil
+	FVector SpawnLocation1 = GetActorLocation() + GetActorForwardVector() * Offset1.X + GetActorRightVector() * Offset1.Y + GetActorUpVector() * Offset1.Z;
+	AYorkProjectile* Projectile1 = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), SpawnLocation1, SpawnRotation);
+	if (Projectile1)
+	{
+		Projectile1->Fire();
+	}
+	FVector SpawnLocation2 = GetActorLocation() + GetActorForwardVector() * Offset2.X + GetActorRightVector() * Offset2.Y + GetActorUpVector() * Offset2.Z;
+	AYorkProjectile* Projectile2 = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), SpawnLocation2, SpawnRotation);
+	if (Projectile2)
+	{
+		Projectile2->Fire();
+	}
+}
+
+void AShipYorke::SetPublisher(APublisher* _Publisher)
+{
+		Publisher = _Publisher; 
+		Publisher->AddObserver(this); //recibe publi y se suscribe
+}
+
+
+
+
+ 
+//AYorkProjectile* Projectile = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), GetActorLocation(), GetActorRotation());
+	//if (Projectile)
+	//{
+	//	//Obtén la dirección hacia adelante de la nave enemiga
+	//	FVector ForwardDirection = GetActorForwardVector();
+
+	//	// Calcula la rotación basada en la dirección hacia adelante
+	//	FRotator SpawnRotation = ForwardDirection.Rotation();
+
+	//	// Configura la posición y dirección del proyectil
+	//	FVector SpawnLocation = GetActorLocation();
+	//	Projectile->SetActorLocationAndRotation(SpawnLocation, SpawnRotation);
+	//	Projectile->Fire(); 
+	//}

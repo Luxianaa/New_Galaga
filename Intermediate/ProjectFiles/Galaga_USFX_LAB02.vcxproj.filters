@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX_LAB02.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{00396E6B-6EA2-435C-BD7F-F8956DBC6BD3}</UniqueIdentifier>
+      <UniqueIdentifier>{5B1F7410-8495-4B2B-8FBA-3331990884FF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX_LAB02.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{BBB05903-C8EE-448E-A8E2-D32704CB819D}</UniqueIdentifier>
+      <UniqueIdentifier>{A6730E39-5BD0-404C-B745-140B07ACA4F8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX_LAB02">
-      <UniqueIdentifier>{05094636-7229-4A83-A44E-D3F20CB28CA6}</UniqueIdentifier>
+      <UniqueIdentifier>{9969F902-2166-4A8D-90E8-089371B36F19}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\AComponenteInvisible.cpp">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
@@ -81,6 +81,12 @@
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\DoomMotherShip.h">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\FacadeScore.cpp">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\FacadeScore.h">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\FacadeShip.cpp">
@@ -146,6 +152,15 @@
     <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\IBuilderMotherShip.h">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\IObserver.cpp">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\IObserver.h">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\ISetMotherShip.cpp">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\ISetMotherShip.h">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClInclude>
@@ -285,6 +300,12 @@
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\ProyectilEnemigo.h">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\Publisher.cpp">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\Publisher.h">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\Shield.cpp">

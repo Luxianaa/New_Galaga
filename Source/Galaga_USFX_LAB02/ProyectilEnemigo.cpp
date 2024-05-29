@@ -76,7 +76,10 @@ void AProyectilEnemigo::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, 
 	AShipYorke* ShipYorke = Cast<AShipYorke>(OtherActor);
 	if (ShipYorke)
 	{
-		ShipYorke->Destroy();
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, TEXT("Colision con nave"));
+
+		ShipYorke->GetDamage(); 
+	//	ShipYorke->Destroy();
 	}
 }
 

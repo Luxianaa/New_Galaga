@@ -85,18 +85,6 @@ protected:
 	
 	float FireRate;
 	FTimerHandle FireTimerHandle;
-
-	
-
-	int GetScore() const { return Score; } 
-
-	void AumentarPoints()
-	{
-		if (Score <= 0)
-
-			Score += 50;
-		
-	}
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

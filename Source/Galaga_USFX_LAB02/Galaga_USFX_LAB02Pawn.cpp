@@ -16,7 +16,6 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "CapsulaCrazy.h"
-#include "ISubscriber.h"
 
 const FName AGalaga_USFX_LAB02Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_LAB02Pawn::MoveRightBinding("MoveRight");

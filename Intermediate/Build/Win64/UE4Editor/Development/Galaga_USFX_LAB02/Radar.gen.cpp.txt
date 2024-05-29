@@ -1,7 +1,0 @@
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB02\Definitions.Galaga_USFX_LAB02.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/Radar.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\Publisher.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Publisher.generated.h
-C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Radar.generated.h

@@ -10,6 +10,8 @@
 #include "FacadeShip.h" 
 #include "Moon.h"
 #include "Kismet/GameplayStatics.h"
+#include "ShipYorke.h"
+#include "Publisher.h"
 
 
 AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
@@ -23,6 +25,18 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 {
 	Super::BeginPlay();
 	//--------------------------------------------------FACADE-------------------------------------------------------------------------------//
+	FVector SpawnLocation2 = FVector(320.0f, 1480.0f, 990.0f);
+	FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
+	FVector SpawnLocation = FVector(-2425.0f, -115.0f, 200.0f);
+
+	ShipYorke = GetWorld()->SpawnActor<AShipYorke>(AShipYorke::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
+	Moon = GetWorld()->SpawnActor<AMoon>(SpawnLocation2, SpawnRotation);  
+	Publisher = GetWorld()->SpawnActor<APublisher>(APublisher::StaticClass());  
+	ShipYorke->SetPublisher(Publisher); //suscrito al publisher agregar al publicador
+	Publisher->ObserveMoon(Moon);//observa la luna
+
+
+
 
 	FacadeShip = GetWorld()->SpawnActor<AFacadeShip>(AFacadeShip::StaticClass());
 	
@@ -37,7 +51,7 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	case 2:
 		FacadeShip->SpawnShipsLevel2();
 		FacadeShip->SpawnRagerShips(); 
-		FacadeShip->SpawnMoon();  
+		FacadeShip->SpawnMoon();
 		break;
 	}
 //-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//

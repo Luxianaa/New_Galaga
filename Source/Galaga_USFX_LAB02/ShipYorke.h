@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "ISubscriber.h"
+#include "IObserver.h"
+#include "Publisher.h"
 #include "ShipYorke.generated.h"
 
 UCLASS()
-class GALAGA_USFX_LAB02_API AShipYorke : public AActor
+class GALAGA_USFX_LAB02_API AShipYorke : public AActor, public IIObserver
 {
 	GENERATED_BODY()
 
@@ -28,21 +29,14 @@ public:
 	void FireProjectile();
 	FTimerHandle FireTimerHandle;
 	float FireRate;
-public: 
-	//vida de la nave Yorke
-
-	int Vida;
-	int VidaMaxima;
-
-////gestionar observadores
-//	void Subscribe(IISubscriber* subscriber);
-//	void Unsubscribe(IISubscriber* subscriber);
-//	void Notify();
-////Metodo Recibir daño
-//	void GetDamage(int Damage);
-//
-//private: 
-//	TArray<IISubscriber*> Subscribers;
-
+	int Vida = 5;
+	void GetDamage();
+public:
+	APublisher* Publisher;
+	void SetPublisher(APublisher* _Publisher);  
+	virtual void Update() override;
+	void DestroySubs(); 
+	void DoubleFire();
+	bool bIsDoubleFiring; 
 
 };

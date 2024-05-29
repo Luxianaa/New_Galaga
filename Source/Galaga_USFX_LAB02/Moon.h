@@ -17,8 +17,6 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* mallamoon; 
-	UPROPERTY(VisibleAnywhere, Category = "Subscriptor")
-	class AGalaga_USFX_LAB02Pawn* Pawn;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -26,6 +24,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	float Tiempo = 0;
+	float GetTiempo() { return Tiempo;}
 
 
 };

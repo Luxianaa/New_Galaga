@@ -1,0 +1,3 @@
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB02\Definitions.Galaga_USFX_LAB02.h
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IObserver.h
+C:\Users\lucia\Desktop\Nuevo Galaga\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IObserver.generated.h

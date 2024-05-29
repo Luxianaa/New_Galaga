@@ -179,9 +179,7 @@ void AFacadeShip::SpawnRagerShips()
 
 void AFacadeShip::SpawnMoon()
 {
-	FVector SpawnLocation = FVector(320.0f, 1480.0f, 990.0f);
-	FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
-	AMoon* Moon = GetWorld()->SpawnActor<AMoon>(SpawnLocation, SpawnRotation); 
+
 }
 
 void AFacadeShip::CollideProjectile(AActor* OtherActor)
@@ -192,7 +190,7 @@ void AFacadeShip::CollideProjectile(AActor* OtherActor)
 	{
 		//	ScorePorEnemigo++;
 			//// Mostrar un mensaje en pantalla informando al jugador sobre la destrucción de la nave enemiga
-		FString Message = FString::Printf(TEXT("¡Nave enemiga destruida! Puntuacion:%c"));
+		FString Message = FString::Printf(TEXT("¡Nave enemiga destruida! "));
 		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Green, Message);
 
 		// Llamar a la función destruir de la nave enemiga
@@ -221,12 +219,13 @@ void AFacadeShip::CollideCrazyCapsule(AActor* OtherActor)
 	AGalaga_USFX_LAB02Pawn* Pawn = Cast<AGalaga_USFX_LAB02Pawn>(OtherActor);
 	if (Pawn)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Capsula comida"));
+		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Purple, TEXT("Capsula comida"));
 		Pawn->MoveCrazy();
 		Pawn->SetPlayerInputEnabled(false);
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Sin Movimiento"));
+		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Orange, TEXT("Sin Movimiento"));
 		//Destruye la capsula 
 		return;
+		//njvbdbvajvbj
 	}
 }
 
@@ -250,7 +249,7 @@ void AFacadeShip::CollideEnemyProjectile(AActor* OtherActor)
 	{
 		Pawn->RecibirImpacto();
 		// Mostrar un mensaje informando al jugador sobre la pérdida de vida
-		FString Message = FString::Printf(TEXT("Vidas restantes: %d "), Pawn->GetVidasRestantes());
+		FString Message = FString::Printf(TEXT("Vidas restantes: %d"), Pawn->GetVidasRestantes());
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Magenta, Message);
 		//PawnScore += ScorePorEnemigo;
 		

@@ -28,7 +28,7 @@ void AMoon::BeginPlay()
 void AMoon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	Tiempo += GetWorld()->GetDeltaSeconds();//incrementa el tiempo almacena en segundos
 }
 
 
