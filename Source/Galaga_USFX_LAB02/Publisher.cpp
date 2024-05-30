@@ -25,12 +25,13 @@ void APublisher::BeginPlay()
 void APublisher::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 	if (Moon)
 	{
 		if (Moon->GetTiempo() > 5 && Moon->GetTiempo() < 10)  
 		{
 			NotifyObservers(); 
-			GEngine -> AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Ya es media Noche"));
+			GEngine -> AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Ya es de Noche,Atacar!"));
 		}
 	}
 
@@ -40,7 +41,7 @@ void APublisher::AddObserver(IIObserver* Observer)
 {
 	if (Observer)
 	{
-		Observers.Add(Observer); 
+		Observers.Add(Observer);  
 	}
 	
 }
@@ -52,13 +53,13 @@ void APublisher::RemoveObserver(IIObserver* Observer)
 
 void APublisher::NotifyObservers()
 {
-	for (IIObserver* Observer : Observers) 
+	for (IIObserver* Observer : Observers)
 	{
-		if (Observer) 
-		{ 
-			Observer->Update(); 
-		} 
-	} 
+		if (Observer)
+		{
+			Observer->Update();
+		}
+	}
 }
 
 void APublisher::ObserveMoon(AMoon* _Moon)

@@ -32,7 +32,7 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	ShipYorke = GetWorld()->SpawnActor<AShipYorke>(AShipYorke::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
 	Moon = GetWorld()->SpawnActor<AMoon>(SpawnLocation2, SpawnRotation);  
 	Publisher = GetWorld()->SpawnActor<APublisher>(APublisher::StaticClass());  
-	ShipYorke->SetPublisher(Publisher); //suscrito al publisher agregar al publicador
+	ShipYorke->SetPublisher(Publisher); //asigno publi
 	Publisher->ObserveMoon(Moon);//observa la luna
 
 
@@ -45,13 +45,13 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	case 1:
 		FacadeShip->SpawnShipsLevel1();
 		FacadeShip->SpawnCapsules();
-		FacadeShip->SpawnMoon(); 
+		//FacadeShip->SpawnMoon(); 
 
 		break;
 	case 2:
 		FacadeShip->SpawnShipsLevel2();
 		FacadeShip->SpawnRagerShips(); 
-		FacadeShip->SpawnMoon();
+		//FacadeShip->SpawnMoon();
 		break;
 	}
 //-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//

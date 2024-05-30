@@ -73,10 +73,10 @@ void AShipYorke::GetDamage()
 
 void AShipYorke::Update()
 {
-	if (!bIsDoubleFiring) //si no esta disparando doble
+	if (!bIsDoubleFiring) //verifica que no esta disparando doble
 	{
 		DoubleFire(); 
-		bIsDoubleFiring = true;
+		bIsDoubleFiring = true;//hace que dispare doble
 	}
 	else if (bIsDoubleFiring) //si esta disparando doble
 	{
@@ -87,17 +87,17 @@ void AShipYorke::Update()
 void AShipYorke::DestroySubs()
 {
 	Publisher->RemoveObserver(this);
-	Destroy(); //le dara un ataque cardiaco
+	Destroy(); 
 }
 
 void AShipYorke::DoubleFire()
 {
 	FVector Offset1 = FVector(50.0f, -30.0f, 0.0f); 
-	FVector Offset2 = FVector(50.0f, 30.0f, 0.0f); // Offset para el segundo proyectil
+	FVector Offset2 = FVector(50.0f, 30.0f, 0.0f); 
 	FVector ForwardDirection = GetActorForwardVector();
 	FRotator SpawnRotation = ForwardDirection.Rotation();
 
-	// Configura la posición y dirección del segundo proyectil
+
 	FVector SpawnLocation1 = GetActorLocation() + GetActorForwardVector() * Offset1.X + GetActorRightVector() * Offset1.Y + GetActorUpVector() * Offset1.Z;
 	AYorkProjectile* Projectile1 = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), SpawnLocation1, SpawnRotation);
 	if (Projectile1)
@@ -117,22 +117,3 @@ void AShipYorke::SetPublisher(APublisher* _Publisher)
 		Publisher = _Publisher; 
 		Publisher->AddObserver(this); //recibe publi y se suscribe
 }
-
-
-
-
- 
-//AYorkProjectile* Projectile = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), GetActorLocation(), GetActorRotation());
-	//if (Projectile)
-	//{
-	//	//Obtén la dirección hacia adelante de la nave enemiga
-	//	FVector ForwardDirection = GetActorForwardVector();
-
-	//	// Calcula la rotación basada en la dirección hacia adelante
-	//	FRotator SpawnRotation = ForwardDirection.Rotation();
-
-	//	// Configura la posición y dirección del proyectil
-	//	FVector SpawnLocation = GetActorLocation();
-	//	Projectile->SetActorLocationAndRotation(SpawnLocation, SpawnRotation);
-	//	Projectile->Fire(); 
-	//}
