@@ -13,7 +13,7 @@ class GALAGA_USFX_LAB02_API AIStrategy : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	AIStrategy();
+	AIStrategy();//proha
 
 protected:
 	// Called when the game starts or when spawned
