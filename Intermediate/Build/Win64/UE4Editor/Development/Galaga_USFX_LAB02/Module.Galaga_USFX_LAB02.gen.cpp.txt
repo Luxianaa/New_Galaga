@@ -62,7 +62,6 @@ C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermed
 C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/FactoryShipLv1.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/FactoryShipLv1.h
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\FactoryShipLv1.generated.h
-C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/Galaga_USFX_LAB02.init.gen.cpp
 C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/Galaga_USFX_LAB02GameMode.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/Galaga_USFX_LAB02GameMode.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
@@ -92,9 +91,6 @@ C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermed
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/IObserver.h
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IObserver.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/ISetMotherShip.gen.cpp
-C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/IStrategy.gen.cpp
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/IStrategy.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IStrategy.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MeshMotherShip.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MeshMotherShip.h
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MeshMotherShip.generated.h
@@ -171,6 +167,8 @@ C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\G
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\ShieldMotherShip.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/ShipRager.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/ShipRager.h
+C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IStrategy.h
+C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IStrategy.generated.h
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\ShipRager.generated.h
 C:/Users/lucia/Desktop/Nuevo Galaga - Copy - Copy/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/ShipYorke.gen.cpp
 C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/ShipYorke.h

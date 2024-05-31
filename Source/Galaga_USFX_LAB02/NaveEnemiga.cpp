@@ -5,6 +5,7 @@
 #include "ProyectilEnemigo.h"
 #include "Sound/SoundBase.h" 
 #include "Kismet/GameplayStatics.h"
+#include "StrategyStraight.h"
 
 // Sets default values
 ANaveEnemiga::ANaveEnemiga()
@@ -59,8 +60,6 @@ void ANaveEnemiga::FireProjectile()
 		Projectile->Fire();
 	}
 }
-
-
 // Called every frame
 void ANaveEnemiga::Tick(float DeltaTime)
 {

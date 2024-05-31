@@ -90,7 +90,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void FireProjectile();
 
-	// Variable que almacena el valor de puntuación de la nave enemiga
 	
 
 };

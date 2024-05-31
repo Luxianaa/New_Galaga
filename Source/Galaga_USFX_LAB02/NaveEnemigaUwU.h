@@ -25,13 +25,15 @@ public:
 
 public:
 	virtual void Tick(float DeltaTime) override;
-protected:
-protected:
 
-	float speed = 1000.0f;
-
-	float targetXLocations[4]; // Array of x-coordinates of target locations
-	float targetYLocations[4]; // Array of y-coordinates of target locations
-	int currentTargetIndex = 0; // Index of the current target location
 	
 };
+
+
+
+
+//float speed = 1000.0f;
+
+//float targetXLocations[4]; // Array of x-coordinates of target locations
+//float targetYLocations[4]; // Array of y-coordinates of target locations
+//int currentTargetIndex = 0; // Index of the current target location

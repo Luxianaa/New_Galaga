@@ -13,19 +13,19 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeIStrategy() {}
 // Cross Module References
-	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AIStrategy_NoRegister();
-	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AIStrategy();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_UIStrategy_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_UIStrategy();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UInterface();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_LAB02();
 // End Cross Module References
-	void AIStrategy::StaticRegisterNativesAIStrategy()
+	void UIStrategy::StaticRegisterNativesUIStrategy()
 	{
 	}
-	UClass* Z_Construct_UClass_AIStrategy_NoRegister()
+	UClass* Z_Construct_UClass_UIStrategy_NoRegister()
 	{
-		return AIStrategy::StaticClass();
+		return UIStrategy::StaticClass();
 	}
-	struct Z_Construct_UClass_AIStrategy_Statics
+	struct Z_Construct_UClass_UIStrategy_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
 #if WITH_METADATA
@@ -34,22 +34,21 @@ void EmptyLinkFunctionForGeneratedCodeIStrategy() {}
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
-	UObject* (*const Z_Construct_UClass_AIStrategy_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+	UObject* (*const Z_Construct_UClass_UIStrategy_Statics::DependentSingletons[])() = {
+		(UObject* (*)())Z_Construct_UClass_UInterface,
 		(UObject* (*)())Z_Construct_UPackage__Script_Galaga_USFX_LAB02,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIStrategy_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "IStrategy.h" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UIStrategy_Statics::Class_MetaDataParams[] = {
 		{ "ModuleRelativePath", "IStrategy.h" },
 	};
 #endif
-	const FCppClassTypeInfoStatic Z_Construct_UClass_AIStrategy_Statics::StaticCppClassTypeInfo = {
-		TCppClassTypeTraits<AIStrategy>::IsAbstract,
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UIStrategy_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<IIStrategy>::IsAbstract,
 	};
-	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AIStrategy_Statics::ClassParams = {
-		&AIStrategy::StaticClass,
-		"Engine",
+	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UIStrategy_Statics::ClassParams = {
+		&UIStrategy::StaticClass,
+		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
@@ -59,25 +58,25 @@ void EmptyLinkFunctionForGeneratedCodeIStrategy() {}
 		0,
 		0,
 		0,
-		0x009000A4u,
-		METADATA_PARAMS(Z_Construct_UClass_AIStrategy_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AIStrategy_Statics::Class_MetaDataParams))
+		0x000840A1u,
+		METADATA_PARAMS(Z_Construct_UClass_UIStrategy_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UIStrategy_Statics::Class_MetaDataParams))
 	};
-	UClass* Z_Construct_UClass_AIStrategy()
+	UClass* Z_Construct_UClass_UIStrategy()
 	{
 		static UClass* OuterClass = nullptr;
 		if (!OuterClass)
 		{
-			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AIStrategy_Statics::ClassParams);
+			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UIStrategy_Statics::ClassParams);
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AIStrategy, 385529866);
-	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AIStrategy>()
+	IMPLEMENT_CLASS(UIStrategy, 912230909);
+	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<UIStrategy>()
 	{
-		return AIStrategy::StaticClass();
+		return UIStrategy::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_AIStrategy(Z_Construct_UClass_AIStrategy, &AIStrategy::StaticClass, TEXT("/Script/Galaga_USFX_LAB02"), TEXT("AIStrategy"), false, nullptr, nullptr, nullptr);
-	DEFINE_VTABLE_PTR_HELPER_CTOR(AIStrategy);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UIStrategy(Z_Construct_UClass_UIStrategy, &UIStrategy::StaticClass, TEXT("/Script/Galaga_USFX_LAB02"), TEXT("UIStrategy"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UIStrategy);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

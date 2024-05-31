@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX_LAB02.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5C38A0FD-EC0E-40E1-8A17-9E0EF61B77AB}</UniqueIdentifier>
+      <UniqueIdentifier>{6B3E7AA9-4164-4A0F-B32E-6A3B9C7C8B42}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX_LAB02.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,11 @@
     <None Include="..\..\Source\Galaga_USFX_LAB02Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{DF585E19-9A5A-4D7B-A3DF-0FD757660028}</UniqueIdentifier>
+      <UniqueIdentifier>{DBDAE5C7-D1A4-45CE-A941-6C0E501846C6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX_LAB02">
-      <UniqueIdentifier>{02F3BFC1-6C72-4941-9983-D3ECCF439853}</UniqueIdentifier>
+      <UniqueIdentifier>{787687AF-A436-44E2-B44F-191F36B50E2C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\AComponenteInvisible.cpp">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
@@ -357,6 +360,12 @@
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\ShipYorke.h">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\StrategyStraight.cpp">
+      <Filter>Source\Galaga_USFX_LAB02</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB02\StrategyStraight.h">
       <Filter>Source\Galaga_USFX_LAB02</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_LAB02\WeakState.cpp">

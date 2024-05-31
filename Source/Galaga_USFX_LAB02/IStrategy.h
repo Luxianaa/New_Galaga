@@ -3,24 +3,25 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "UObject/Interface.h"
 #include "IStrategy.generated.h"
 
-UCLASS()
-class GALAGA_USFX_LAB02_API AIStrategy : public AActor
+// This class does not need to be modified.
+UINTERFACE(MinimalAPI)
+class UIStrategy : public UInterface
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AIStrategy();//proha
+};
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+/**
+ * 
+ */
+class GALAGA_USFX_LAB02_API IIStrategy
+{
+	GENERATED_BODY()
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
+public:
+	virtual void Move(float DeltaTime) = 0;
+	//class ANaveEnemiga* NaveEnemiga, float DeltaTime 
 };

@@ -171,9 +171,9 @@ void AFacadeShip::SpawnCapsules()
 
 void AFacadeShip::SpawnRagerShips()
 {
-	FVector SpawnLocation = FVector(-700.0f, -3400.0f, 200.0f);
-	FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
-	AShipRager* ShipRager = GetWorld()->SpawnActor<AShipRager>(SpawnLocation, SpawnRotation);
+	//FVector SpawnLocation = FVector(-700.0f, -3400.0f, 200.0f);
+	//FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
+	//AShipRager* ShipRager = GetWorld()->SpawnActor<AShipRager>(SpawnLocation, SpawnRotation);
 
 }
 

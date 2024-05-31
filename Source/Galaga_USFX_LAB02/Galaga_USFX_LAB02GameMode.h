@@ -36,6 +36,7 @@ protected:
 	class AShipYorke* ShipYorke;//sub
 	class APublisher* Publisher;
 	class AHendrixShip* HendrixShip;
+	class AShipRager* ShipRager;
 };
 
 
