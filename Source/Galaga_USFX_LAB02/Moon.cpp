@@ -2,6 +2,7 @@
 
 
 #include "Moon.h"
+#include "Galaga_USFX_LAB02Pawn.h"
 
 // Sets default values
 AMoon::AMoon()
@@ -27,7 +28,7 @@ void AMoon::BeginPlay()
 void AMoon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Tiempo += GetWorld()->GetDeltaSeconds();//actualiza el  tiempo y lo almacena en segundos
+	Tiempo += GetWorld()->GetDeltaSeconds();//incrementa el tiempo almacena en segundos
 }
 
 

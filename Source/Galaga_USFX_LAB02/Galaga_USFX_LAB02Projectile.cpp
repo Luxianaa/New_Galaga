@@ -15,6 +15,7 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "UObject/ConstructorHelpers.h"
 #include "FacadeShip.h"
+#include "HendrixShip.h"
 
 
 AGalaga_USFX_LAB02Projectile::AGalaga_USFX_LAB02Projectile()
@@ -55,6 +56,12 @@ void AGalaga_USFX_LAB02Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* O
 	FacadeShip->CollideProjectile(OtherActor);
 	FacadeShip->CollideShield(OtherActor);
 	FacadeShip->CollideAliens(OtherActor);
+	AHendrixShip* Hendrix = Cast<AHendrixShip>(OtherActor);
+	if (Hendrix)
+	{
+		Hendrix->ReceiveDamageHendrix();
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Hendrix attacked"));
+	}
 
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())

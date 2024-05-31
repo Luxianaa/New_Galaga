@@ -43,6 +43,7 @@ protected:
 	virtual void BeginPlay() override;
 	float FireRate; 
 	FTimerHandle FireTimerHandle;
+	void Drops();
 	//virtual void FireProjectile() override; 
 
 public:

@@ -35,6 +35,7 @@ protected:
 	class AMoon* Moon; //obs
 	class AShipYorke* ShipYorke;//sub
 	class APublisher* Publisher;
+	class AHendrixShip* HendrixShip;
 };
 
 

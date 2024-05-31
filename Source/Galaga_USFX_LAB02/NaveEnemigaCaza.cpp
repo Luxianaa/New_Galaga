@@ -20,6 +20,12 @@ void ANaveEnemigaCaza::BeginPlay()
 	Super::BeginPlay();
 }
 
+void ANaveEnemigaCaza::Drops()
+{
+	/*FVector NewLocation = GetActorLocation() + GetActorForwardVector() * 300.0f;
+	SetActorLocation(NewLocation);*/
+}
+
 
 
 void ANaveEnemigaCaza::Tick(float DeltaTime)

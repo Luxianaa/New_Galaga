@@ -23,11 +23,9 @@ class GALAGA_USFX_LAB02_API IIHendrixState
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 
-	virtual void Move() = 0;
-	virtual void ShootTriple() = 0;
-	virtual void ChangeMesh() = 0;
+	virtual void Move(float DeltaTime) = 0;
+	virtual void Drop() = 0;
 	virtual void Hide() = 0;
 
-	virtual void SetHendrix(class AMotherShipHendrix* Hendrix) = 0;
-
+	virtual void SetHendrix(class AHendrixShip* _Hendrix) = 0;  
 };

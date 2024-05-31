@@ -26,7 +26,7 @@ void UAComponenteMovimiento::BeginPlay()
     //establecer el temporizador para las naves en 5segundos
  // GetWorld()->GetTimerManager().SetTimer(TiempoVisibilidad, this, &UAComponenteMovimiento::AparecerDesaparecerNaves, 3.0f, true);
    
-  GetWorld()->GetTimerManager().SetTimer(TiempoVisibilidad2, this, &UAComponenteMovimiento::ShieldVisibility, 3.0f, true); 
+  //GetWorld()->GetTimerManager().SetTimer(TiempoVisibilidad2, this, &UAComponenteMovimiento::ShieldVisibility, 3.0f, true); 
 }
 
 
