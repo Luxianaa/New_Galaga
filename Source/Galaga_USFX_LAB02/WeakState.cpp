@@ -3,7 +3,7 @@
 
 #include "WeakState.h"
 #include "HendrixShip.h"
-#include "CapsulaCrazy.h"  
+//#include "CapsulaCrazy.h"  
 
 // Sets default values
 AWeakState::AWeakState()
@@ -56,27 +56,27 @@ void AWeakState::Move(float DeltaTime)
 
 void AWeakState::Drop()
 {
-	if (NumShotsFired >= MaxShots)
-	{
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Límite de disparos alcanzado"));
-		return; 
-	}
-	ACapsulaCrazy* Crazy = GetWorld()->SpawnActor<ACapsulaCrazy>(ACapsulaCrazy::StaticClass(), GetActorLocation(), GetActorRotation());
-	if (Crazy)
-	{
-		// Obtén la dirección hacia adelante de la nave enemiga
-		FVector ForwardDirection = Hendrix->GetActorForwardVector();
+	//if (NumShotsFired >= MaxShots)
+	//{
+	//	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Límite de disparos alcanzado"));
+	//	return; 
+	//}
+	//ACapsulaCrazy* Crazy = GetWorld()->SpawnActor<ACapsulaCrazy>(ACapsulaCrazy::StaticClass(), GetActorLocation(), GetActorRotation());
+	//if (Crazy)
+	//{
+	//	// Obtén la dirección hacia adelante de la nave enemiga
+	//	FVector ForwardDirection = Hendrix->GetActorForwardVector();
 
-		// Calcula la rotación basada en la dirección hacia adelante
-		//FRotator SpawnRotation = ForwardDirection.Rotation(); 
+	//	// Calcula la rotación basada en la dirección hacia adelante
+	//	//FRotator SpawnRotation = ForwardDirection.Rotation(); 
 
-		// Configura la posición y dirección del proyectil
-		FVector SpawnLocation = Hendrix->GetActorLocation(); 
-		Crazy->SetActorLocationAndRotation(Hendrix->GetActorLocation(), ForwardDirection.Rotation());
-		// Dispara el proyectil 
-		NumShotsFired++;
-		Crazy->FireCpasule(); 
-	} 
+	//	// Configura la posición y dirección del proyectil
+	//	FVector SpawnLocation = Hendrix->GetActorLocation(); 
+	//	Crazy->SetActorLocationAndRotation(Hendrix->GetActorLocation(), ForwardDirection.Rotation());
+	//	// Dispara el proyectil 
+	//	NumShotsFired++;
+	//	Crazy->FireCpasule(); 
+	//} 
 }
 
 void AWeakState::Hide()
@@ -86,9 +86,8 @@ void AWeakState::Hide()
 		bool Desaparecer = FMath::RandBool();
 
 		Hendrix->SetActorHiddenInGame(!Desaparecer);
-		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Yellow, Desaparecer ? TEXT("Visible") : TEXT("Oculto"));
+		//GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Yellow, Desaparecer ? TEXT("Visible") : TEXT("Oculto"));
 	}
-
 }
 
 void AWeakState::SetHendrix(AHendrixShip* _Hendrix)

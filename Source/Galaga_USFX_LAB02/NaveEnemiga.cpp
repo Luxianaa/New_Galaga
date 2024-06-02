@@ -4,8 +4,10 @@
 #include "NaveEnemiga.h"
 #include "ProyectilEnemigo.h"
 #include "Sound/SoundBase.h" 
+#include "IStrategy.h"
 #include "Kismet/GameplayStatics.h"
 #include "StrategyStraight.h"
+
 
 // Sets default values
 ANaveEnemiga::ANaveEnemiga()
@@ -34,6 +36,7 @@ void ANaveEnemiga::BeginPlay()
 	Super::BeginPlay(); 
 	
 	GetWorld()->GetTimerManager().SetTimer(FireTimerHandle, this, &ANaveEnemiga::FireProjectile, FireRate, true);
+
 }
 
 void ANaveEnemiga::FireProjectile()
@@ -60,6 +63,22 @@ void ANaveEnemiga::FireProjectile()
 		Projectile->Fire();
 	}
 }
+
+//void ANaveEnemiga::AlterarEstrategia(AActor* _StrategyElegida)
+//{
+//	Strategy = Cast<IIStrategy>(_StrategyElegida); 
+//}
+//
+//void ANaveEnemiga::UsarEstrategia(float DeltaTime)
+//{
+//	if (Strategy)
+//	{ 
+//		Strategy->Move(this, DeltaTime);
+//	}
+//
+//}
+
+
 // Called every frame
 void ANaveEnemiga::Tick(float DeltaTime)
 {
@@ -79,3 +98,7 @@ void ANaveEnemiga::Tick(float DeltaTime)
 
 }
 
+//void ANaveEnemiga::SetStrategy(IIStrategy* _Strategy)
+//{
+//	Strategy = _Strategy;
+//}

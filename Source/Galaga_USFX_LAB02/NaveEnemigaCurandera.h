@@ -21,5 +21,6 @@ protected:
 	FString tipoNave = "Curandera";	
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void ReceiveDamage() override;
 
 };

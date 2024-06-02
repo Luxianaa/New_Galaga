@@ -60,7 +60,6 @@ void AGalaga_USFX_LAB02Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* O
 	if (Hendrix)
 	{
 		Hendrix->ReceiveDamageHendrix();
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Hendrix attacked"));
 	}
 
 	// Only add impulse and destroy projectile if we hit a physics

@@ -22,7 +22,7 @@ ANaveEnemigaTransporte::ANaveEnemigaTransporte()
      // Set the initial target location index
 
      currentTargetIndex = 0;
-
+     Vida = 2;
 }
 
 
@@ -88,6 +88,15 @@ void ANaveEnemigaTransporte::Tick(float DeltaTime)
         }
 
         // Establecer la nueva posición de la nave
-        SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, NuevaAltura));
+        SetActorLocation(FVector(GetActorLocation().X, NuevaAltura,GetActorLocation().Z));  
  
+}
+
+void ANaveEnemigaTransporte::ReceiveDamage()
+{
+    Vida--;
+    if (Vida <= 0)
+    {
+		Destroy();
+	}
 }

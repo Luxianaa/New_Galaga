@@ -7,8 +7,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "TimerManager.h"
 #include "Publisher.h"
-//#include "Kismet/GameplayStatics.h"
-#include "UObject/ConstructorHelpers.h"
+#include "IStrategy.h"
+
 
 // Sets default values
 AShipYorke::AShipYorke()
@@ -21,7 +21,7 @@ AShipYorke::AShipYorke()
 	ShipYorke->SetStaticMesh(meshYorke.Object);
 	RootComponent = ShipYorke;
 	//SetActorScale3D(FVector(1.0f, 1.0f, 1.0f));
-	ComponenteMovimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("MovimientoNavesComponente"));
+	//ComponenteMovimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("MovimientoNavesComponente"));
 	FireRate = 1.0f;
 	Vida = 3;
 	bIsDoubleFiring = false;
@@ -40,7 +40,6 @@ void AShipYorke::BeginPlay()
 void AShipYorke::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void AShipYorke::FireProjectile()
@@ -112,6 +111,31 @@ void AShipYorke::DoubleFire()
 	}
 }
 
+void AShipYorke::SetMovement(AActor* NewStrategy)
+{
+	Strategy = Cast<IIStrategy>(NewStrategy); 
+	if (Strategy)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red,TEXT("Invalid Cast! See Output log for more details"));
+	}
+}
+
+void AShipYorke::CreateMovement()
+{
+	if (Strategy)
+	{
+		Strategy->MoverNave(this);   
+	}
+}
+
+//void AShipYorke::CreateMovement(float DeltaTime)
+//{
+//	if (Strategy)
+//	{
+//		Strategy->ApplyMovement(DeltaTime); 
+//	}
+//}
+
 void AShipYorke::SetPublisher(APublisher* _Publisher)
 {
 		Publisher = _Publisher; 
@@ -120,19 +144,3 @@ void AShipYorke::SetPublisher(APublisher* _Publisher)
 
 
 
-
- 
-//AYorkProjectile* Projectile = GetWorld()->SpawnActor<AYorkProjectile>(AYorkProjectile::StaticClass(), GetActorLocation(), GetActorRotation());
-	//if (Projectile)
-	//{
-	//	//Obtén la dirección hacia adelante de la nave enemiga
-	//	FVector ForwardDirection = GetActorForwardVector();
-
-	//	// Calcula la rotación basada en la dirección hacia adelante
-	//	FRotator SpawnRotation = ForwardDirection.Rotation();
-
-	//	// Configura la posición y dirección del proyectil
-	//	FVector SpawnLocation = GetActorLocation();
-	//	Projectile->SetActorLocationAndRotation(SpawnLocation, SpawnRotation);
-	//	Projectile->Fire(); 
-	//}

@@ -17,6 +17,8 @@ public:
 protected:
 
 	virtual void BeginPlay() override;	
+public:
+	virtual void Tick(float DeltaTime) override;
 
 protected:
 	UPROPERTY(VisibleAnywhere, Category = "ShieldMotherShip")
@@ -31,12 +33,15 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "FacadeShip")
 	class AFacadeShip* FacadeShip;
 	FTimerHandle SpawnTimerHandle;
-	//----------------------
+	//--------------------------
 	class AMoon* Moon; //obs
 	class AShipYorke* ShipYorke;//sub
 	class APublisher* Publisher;
 	class AHendrixShip* HendrixShip;
 	class AShipRager* ShipRager;
+	//---------------------------
+	float Time;  
+	class AStrategyStraight* StrategyStraight; 
 };
 
 

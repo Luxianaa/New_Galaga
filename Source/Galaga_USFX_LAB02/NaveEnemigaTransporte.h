@@ -34,5 +34,6 @@ private:
 	TArray<FVector> targetLocations;
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void ReceiveDamage() override; 
 
 };

@@ -21,7 +21,7 @@ ANaveEnemigaHacker::ANaveEnemigaHacker()
 	// Set the initial target location index
 
 	currentTargetIndex = 0;
-
+	Vida = 1;
 }
 
 
@@ -49,4 +49,13 @@ void ANaveEnemigaHacker::Tick(float DeltaTime)
 			// Mover a la siguiente ubicación de destino
 			currentTargetIndex = (currentTargetIndex + 1) % targetLocations.Num();
 		}
+}
+
+void ANaveEnemigaHacker::ReceiveDamage()
+{
+	Vida--;
+	if (Vida <= 0)
+	{
+		Destroy();
+	}
 }

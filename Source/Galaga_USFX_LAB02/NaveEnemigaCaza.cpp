@@ -12,7 +12,7 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 	 Radio = 20.0f;// dio de la circunferencia
 	 Angulo = 0.0f; // Ángulo inicial
 	 Speed = 2.0f;
-
+	 Vida = 1;
 }
 
 void ANaveEnemigaCaza::BeginPlay()
@@ -48,4 +48,13 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	SetActorLocation(NewLocation);
 
 	
+}
+
+void ANaveEnemigaCaza::ReceiveDamage()
+{
+	Vida--;
+	if (Vida <= 0)
+	{
+		Destroy();
+	}
 }

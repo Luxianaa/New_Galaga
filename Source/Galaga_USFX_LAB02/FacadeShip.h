@@ -21,16 +21,21 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Ships")
 	class ANaveEnemiga* NaveEnemiga;
+	class StrategyStraight* StrategyStraight; 
+	class ANavesPruebas* NavesPruebas; 
 
 
 public:
 	// Called every frame
+	/*TArray<class ANaveEnemiga*> NavesEnemigasLv1; 
+	TArray<class ANaveEnemiga*> NavesEnemigasLv2;*/
+
 	virtual void Tick(float DeltaTime) override;
 	void SpawnShipsLevel1();
 	void SpawnShipsLevel2();
 	void SpawnCapsules();
 	void SpawnRagerShips();
-	void SpawnMoon();
+	//void SpawnMoon();
 	FTimerHandle SpawnTimerHandle; 
 	void CollideProjectile(AActor* OtherActor);//pawn a NE
 	void CollideShield(AActor* OtherActor);//MOthership
@@ -39,4 +44,5 @@ public:
 	void CollideEnemyProjectile(AActor* OtherActor); //pawn
 	void CollideLifeCapsule(AActor* OtherActor); //pawn
 	void CollideAliens(AActor* OtherActor); 
+
 };

@@ -20,8 +20,10 @@ public:
 	class UAComponenteMovimiento* componenteMovimiento;
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void ReceiveDamage() override;
 protected:
 	FString tipoNave="BigPoppa";
+
 
 
 

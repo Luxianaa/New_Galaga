@@ -21,6 +21,7 @@ ANaveEnemigaEspia::ANaveEnemigaEspia()
     TargetLocations.Add(FVector(0.0f, 0.0f, 200.0f));   // De vuelta a Punto A 
     CurrentTargetIndex = 0; 
     Speed = 1000.0f; 
+    Vida = 1;
 }
 
 void ANaveEnemigaEspia::Tick(float DeltaTime)
@@ -59,4 +60,13 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
 
     //// Establecer la nueva posición de la nave
     //SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, NuevaAltura));
+}
+
+void ANaveEnemigaEspia::ReceiveDamage()
+{
+    Vida--;
+    if (Vida <= 0)
+    {
+		Destroy();
+	}
 }

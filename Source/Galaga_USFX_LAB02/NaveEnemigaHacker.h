@@ -23,6 +23,7 @@ protected:
 public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
+	virtual void ReceiveDamage() override; 
 private:
 	int32 currentTargetIndex;
 

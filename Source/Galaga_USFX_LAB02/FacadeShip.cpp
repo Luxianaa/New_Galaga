@@ -30,6 +30,7 @@
 #include "Galaga_USFX_LAB02Pawn.h" 
 #include "Aliens.h"
 #include "Moon.h"
+#include "NaveEnemiga.h"
 
 
 // Sets default values
@@ -70,33 +71,43 @@ void AFacadeShip::SpawnShipsLevel1()
 		{
 			ubicacionActual.Y = ubicacionInicialNaves.Y + 1000.0f;
 			ubicacionActual = FVector(ubicacionInicialNaves.X, ubicacionInicialNaves.Y + 300.0f * i, ubicacionInicialNaves.Z);
-			factory->CreateShips("Caza", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("Caza", World, ubicacionActual, rotacionNave);
+		//	NavesEnemigasLv1.Add(factory->CreateShips("Caza", World, ubicacionActual, rotacionNave));
+
 		}
-		for (int i = 0; i < 6; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			ubicacionActual = FVector(ubicacionInicialNaves.X, ubicacionInicialNaves.Y + 300.0f * i, ubicacionInicialNaves.Z);
-			factory->CreateShips("Transporte", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("Transporte", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv1.Add(factory->CreateShips("Transporte", World, ubicacionActual, rotacionNave));
+
 		}
 		ubicacionActual.X = ubicacionInicialNaves.X - 250.0f;
 
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 2; j++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * j;
-			factory->CreateShips("UwU", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("UwU", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv1.Add(factory->CreateShips("UwU", World, ubicacionActual, rotacionNave));
+
 		}
 
 		ubicacionActual.X = ubicacionInicialNaves.X - 500.0f;
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * i;
-			factory->CreateShips("Hacker", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("Hacker", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv1.Add(factory->CreateShips("Hacker", World, ubicacionActual, rotacionNave));
+
 		}
 		ubicacionActual.X = ubicacionInicialNaves.X - 750.0f;
 
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < 2; j++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * j;
-			factory->CreateShips("Espia", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("Espia", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv1.Add(factory->CreateShips("Espia", World, ubicacionActual, rotacionNave));
+
 		}
 	}
 }
@@ -114,34 +125,42 @@ void AFacadeShip::SpawnShipsLevel2()
 		FVector ubicacionActual = ubicacionInicialNaves;
 
 		ubicacionActual.X = ubicacionInicialNaves2.X - 250.0f;
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 2; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * i;
-			factory->CreateShips("CazaLv1", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("CazaLv1", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv2.Add(factory->CreateShips("CazaLv1", World, ubicacionActual, rotacionNave));
+
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 500.0f;
-		for (int j = 0; j < 20; j++)
+		for (int j = 0; j < 3; j++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * j;
-			factory->CreateShips("HackerLv1", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("HackerLv1", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv2.Add(factory->CreateShips("HackerLv1", World, ubicacionActual, rotacionNave));
+
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 750.0f;
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < 2; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * i;
-			factory->CreateShips("EspiaLv1", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("EspiaLv1", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv2.Add(factory->CreateShips("EspiaLv1", World, ubicacionActual, rotacionNave));
+
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 1000.0f;
-		for (int j = 0; j < 20; j++)
+		for (int j = 0; j < 2; j++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * j;
-			factory->CreateShips("BigPoppaLv1", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("BigPoppaLv1", World, ubicacionActual, rotacionNave);
+		
 		}
 		ubicacionActual.X = ubicacionInicialNaves2.X - 1250.0f;
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			ubicacionActual.Y = ubicacionInicialNaves2.Y + 300.0f * i;
-			factory->CreateShips("TransporteLv1", World, ubicacionActual, rotacionNave);
+			ANaveEnemiga* Nave = factory->CreateShips("TransporteLv1", World, ubicacionActual, rotacionNave);
+			//NavesEnemigasLv2.Add(factory->CreateShips("TransporteLv1", World, ubicacionActual, rotacionNave));
 		}
 	}
 }
@@ -149,8 +168,6 @@ void AFacadeShip::SpawnShipsLevel2()
 void AFacadeShip::SpawnCapsules()
 {
 	FVector SpawnLocation = FVector(FMath::RandRange(-1000.0f, 120.0f), FMath::RandRange(-1000.0f, 120.0f), 200.0f);
-	//FVector SpawnLocation2 = FVector(FMath::RandRange(-1000.0f, 120.0f), FMath::RandRange(-1000.0f, 120.0f), 200.0f);
-	//FVector SpawnLocation3 = FVector(FMath::RandRange(-1000.0f, 120.0f), FMath::RandRange(-1000.0f, 120.0f), 200.0f);
 	FRotator SpawnRotation = FRotator(0.0f, 0.0f, .0f);
 	// Genera cápsulas
 	if (FMath::RandBool())
@@ -177,11 +194,6 @@ void AFacadeShip::SpawnRagerShips()
 
 }
 
-void AFacadeShip::SpawnMoon()
-{
-
-}
-
 void AFacadeShip::CollideProjectile(AActor* OtherActor)
 {
 	//Collide for my projectile
@@ -194,7 +206,7 @@ void AFacadeShip::CollideProjectile(AActor* OtherActor)
 		GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Green, Message);
 
 		// Llamar a la función destruir de la nave enemiga
-		Nave->Destroy();
+		Nave->ReceiveDamage(); 
 	}
 }
 

@@ -19,6 +19,7 @@ ANaveEnemigaUwU::ANaveEnemigaUwU()
 	//targetXLocations[3] = 100.0f;
 	//targetYLocations[3] = -1000.0f;
 	//currentTargetIndex = 0;
+	Vida = 1;
 }
 void ANaveEnemigaUwU::BeginPlay()
 {
@@ -44,4 +45,13 @@ void ANaveEnemigaUwU::Tick(float DeltaTime)
 	//	// Move to the next target location
 	//	currentTargetIndex = (currentTargetIndex + 1) % 4;
 	//}
+}
+
+void ANaveEnemigaUwU::ReceiveDamage()
+{
+	Vida--;
+	if (Vida <= 0)
+	{
+		Destroy();
+	}
 }

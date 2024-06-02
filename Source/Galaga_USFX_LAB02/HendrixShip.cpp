@@ -41,7 +41,9 @@ void AHendrixShip::Tick(float DeltaTime)
 
 void AHendrixShip::ReceiveDamageHendrix()
 {
+	
 	Vida -= 25;
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Vida: %d"), Vida));  
 	if (Vida <= 0)
 	{
 		Destroy();

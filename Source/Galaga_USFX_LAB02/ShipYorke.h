@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "IObserver.h"
+#include "IStrategy.h"
 #include "Publisher.h"
 #include "ShipYorke.generated.h"
 
@@ -38,5 +39,10 @@ public:
 	void DestroySubs(); 
 	void DoubleFire();
 	bool bIsDoubleFiring; 
+private:
+	IIStrategy* Strategy;
+public:
+	void SetMovement(AActor* NewStrategy);
+	void CreateMovement();
 
 };

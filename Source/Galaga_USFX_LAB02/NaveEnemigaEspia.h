@@ -29,6 +29,7 @@ public:
 public:
 
 	virtual void Tick(float DeltaTime) override;
+	virtual void ReceiveDamage() override;  
 private:
 	TArray<FVector> TargetLocations;
 	int32 CurrentTargetIndex;
