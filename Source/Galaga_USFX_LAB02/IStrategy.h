@@ -22,7 +22,5 @@ class GALAGA_USFX_LAB02_API IIStrategy
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void MoverNave(class AShipYorke* Yorke) = 0;
-	//virtual void ApplyMovement(/*class AShipYorke* Yorke, */float DeltaTime) = 0;     
-	//class ANaveEnemiga* NaveEnemiga, float DeltaTime 
+	virtual void Move(class ANavePruebas* Nave, float DeltaTime) = 0;   
 };

@@ -8,7 +8,7 @@
 #include "StrategyStraight.generated.h"
 
 UCLASS()
-class GALAGA_USFX_LAB02_API AStrategyStraight : public AActor, public IIStrategy 
+class GALAGA_USFX_LAB02_API AStrategyStraight : public AActor, public IIStrategy
 {
 	GENERATED_BODY()
 	
@@ -19,14 +19,18 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	//class AShipYorke* Yorke;
 
 public:	
 	float MovimientoNaves = 4; 
 	float limiteInferiorY = 1600.0f; 
 	int DireccionMovimientoHorizontal = 1; 
+	float Speed;
+	float Radio;
+	float Angulo;
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-public:
-	virtual void MoverNave(class AShipYorke* Yorke) override; 
-};
+
+	virtual void  Move(class ANavePruebas* Nave,float DeltaTime) override;  
+
+
+}; 

@@ -15,11 +15,14 @@
 #include "HendrixShip.h"
 #include "NavePruebas.h"
 #include "StrategyStraight.h"
+#include "Engine/World.h"
+#include "IStrategy.h" 
+#include "Engine/Engine.h"
 
 
 AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
 {
-	// set default pawn class to our character class
+	// set default pawn class to our character zz
 	DefaultPawnClass = AGalaga_USFX_LAB02Pawn::StaticClass();
 	Time = 0.0f;
 }
@@ -27,9 +30,6 @@ AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
 void AGalaga_USFX_LAB02GameMode::BeginPlay()
 {
 	Super::BeginPlay();
-
-	StrategyStraight = GetWorld()->SpawnActor<AStrategyStraight>(AStrategyStraight::StaticClass());
-	//NavePruebas = GetWorld()->SpawnActor<ANavePruebas>(ANavePruebas::StaticClass());  
 
 	//--------------------------------------------------FACADE-------------------------------------------------------------------------------//
 	FVector SpawnLocation2 = FVector(320.0f, 1480.0f, 990.0f);
@@ -66,6 +66,21 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Level 1"));
 		break;
 	}
+	//--------------------------------------------------STRATEGY-------------------------------------------------------------------------------//
+
+	FVector SpawnLocation5 = FVector(-700.0f, -115.0f, 200.0f);
+	NavePrueba = GetWorld()->SpawnActor<ANavePruebas>(ANavePruebas::StaticClass(), SpawnLocation5, FRotator::ZeroRotator); 
+
+	StrategyStraight = GetWorld()->SpawnActor<AStrategyStraight>(AStrategyStraight::StaticClass());  
+
+	if (NavePrueba)
+	{
+		NavePrueba->SetMovementStrategy(StrategyStraight); 
+		NavePrueba->CrearMovimiento(5.0f);//crear movmiento a los 5 segundos 
+	}
+	
+	
+
 //-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//
 
 	//UWorld* const World = GetWorld();
@@ -103,8 +118,8 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 void AGalaga_USFX_LAB02GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	ShipYorke->SetMovement(StrategyStraight);
-	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, TEXT("Invalid Cast! See Output log for more details")); 
-	ShipYorke->CreateMovement();
+	Time += DeltaTime; 
 }
+
+
 

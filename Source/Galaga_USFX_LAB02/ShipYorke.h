@@ -39,10 +39,4 @@ public:
 	void DestroySubs(); 
 	void DoubleFire();
 	bool bIsDoubleFiring; 
-private:
-	IIStrategy* Strategy;
-public:
-	void SetMovement(AActor* NewStrategy);
-	void CreateMovement();
-
 };

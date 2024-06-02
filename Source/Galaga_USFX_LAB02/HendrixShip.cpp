@@ -35,7 +35,7 @@ void AHendrixShip::BeginPlay()
 void AHendrixShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	MoveHendrix(DeltaTime);
+	MoveHendrix(DeltaTime); 
 	DropHendrix(); 
 }
 

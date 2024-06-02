@@ -34,12 +34,13 @@ void AShipYorke::BeginPlay()
 	Super::BeginPlay();
 
 	GetWorld()->GetTimerManager().SetTimer(FireTimerHandle, this, &AShipYorke::FireProjectile, FireRate, true); 
+
 }
 
 // Called every frame
 void AShipYorke::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
+	Super::Tick(DeltaTime);  
 }
 
 void AShipYorke::FireProjectile()
@@ -110,31 +111,6 @@ void AShipYorke::DoubleFire()
 		Projectile2->Fire();
 	}
 }
-
-void AShipYorke::SetMovement(AActor* NewStrategy)
-{
-	Strategy = Cast<IIStrategy>(NewStrategy); 
-	if (Strategy)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red,TEXT("Invalid Cast! See Output log for more details"));
-	}
-}
-
-void AShipYorke::CreateMovement()
-{
-	if (Strategy)
-	{
-		Strategy->MoverNave(this);   
-	}
-}
-
-//void AShipYorke::CreateMovement(float DeltaTime)
-//{
-//	if (Strategy)
-//	{
-//		Strategy->ApplyMovement(DeltaTime); 
-//	}
-//}
 
 void AShipYorke::SetPublisher(APublisher* _Publisher)
 {

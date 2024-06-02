@@ -39,9 +39,11 @@ protected:
 	class APublisher* Publisher;
 	class AHendrixShip* HendrixShip;
 	class AShipRager* ShipRager;
-	//---------------------------
+	//---------------------------Strategy
 	float Time;  
-	class AStrategyStraight* StrategyStraight; 
+	class AStrategyStraight* StrategyStraight;
+	class ANavePruebas* NavePrueba;
+	//class IIStrategy* Strategy;
 };
 
 
