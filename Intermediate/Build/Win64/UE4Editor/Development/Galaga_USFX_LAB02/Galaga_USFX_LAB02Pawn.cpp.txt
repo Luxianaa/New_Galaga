@@ -6,6 +6,8 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IStrategyPawn.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IStrategyPawn.generated.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Galaga_USFX_LAB02Pawn.generated.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\Galaga_USFX_LAB02Projectile.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Galaga_USFX_LAB02Projectile.generated.h
@@ -48,5 +50,9 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Wi
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CapsulaCrazy.generated.h
-C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IStrategy.h
-C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IStrategy.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyDefensive.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyDefensive.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyOffensive.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyOffensive.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyDeluxe.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyDeluxe.generated.h

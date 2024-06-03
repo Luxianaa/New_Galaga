@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "IStrategyPawn.h"
 #include "Galaga_USFX_LAB02Pawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -98,10 +99,25 @@ public:
 	void RecibirImpacto();
 	int GetVidasRestantes() const { return VidasRestantes; }
 	void AumentarVida();
+	void Desactivar();  
 
 public:
 	void ReducirVida();
 	void CheckDestroy();
 	int VidasRestantes = 3;
+
+private :
+		IIStrategyPawn* Strategy;
+public:
+	void SetStrategy(IIStrategyPawn* NewStrategy);
+	void ActivateStrategy();
+
+	class AStrategyDefensive* StrategyDefensive;
+	class AStrategyOffensive* StrategyOffensive;
+	class AStrategyDeluxe* StrategyDeluxe;
+
+	void KeyDefensiveStrategy();
+	void KeyOffensiveStrategy();
+	void KeyDeluxeStrategy();
 };
 

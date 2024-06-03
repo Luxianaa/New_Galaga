@@ -16,6 +16,9 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "CapsulaCrazy.h"
+#include "StrategyDefensive.h"
+#include "StrategyOffensive.h"
+#include "StrategyDeluxe.h"
 
 const FName AGalaga_USFX_LAB02Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_LAB02Pawn::MoveRightBinding("MoveRight");
@@ -75,12 +78,29 @@ void AGalaga_USFX_LAB02Pawn::SetupPlayerInputComponent(class UInputComponent* Pl
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
 
-
+	FInputActionKeyMapping Desactivar("Desactivar", EKeys::L);
+	UPlayerInput::AddEngineDefinedActionMapping(Desactivar); 
+	PlayerInputComponent->BindAction("Desactivar", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Desactivar);  
+	
 	// Define la acción "Teleport" y vincula la tecla "T" a ella
 	FInputActionKeyMapping Teleport("Teleport", EKeys::T);
 	UPlayerInput::AddEngineDefinedActionMapping(Teleport);
 	PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport);
 	// Vincula la acción "Teleport" a la función de teletransporte de tu Pawn
+	
+	//-----------------------------------------------------------------------------------------------------------------------//
+
+	PlayerInputComponent->BindAction("Defensiva", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::KeyDefensiveStrategy); 
+	FInputActionKeyMapping Defensive("Defensiva", EKeys::M); 
+	UPlayerInput::AddEngineDefinedActionMapping(Defensive);   
+	// Vincula la acción "Defensiva" a la función de estrategia defensiva de tu Pawn
+	PlayerInputComponent->BindAction("Ofensiva", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::KeyOffensiveStrategy);
+	FInputActionKeyMapping Offensive("Ofensiva", EKeys::N);
+	UPlayerInput::AddEngineDefinedActionMapping(Offensive);
+	// Vincula la acción "Ofensiva" a la función de estrategia ofensiva de tu Pawn
+	PlayerInputComponent->BindAction("Deluxe", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::KeyDeluxeStrategy);
+	FInputActionKeyMapping Deluxe("Deluxe", EKeys::B);
+	UPlayerInput::AddEngineDefinedActionMapping(Deluxe);
 }
 
 void AGalaga_USFX_LAB02Pawn::Tick(float DeltaSeconds)
@@ -169,7 +189,9 @@ void AGalaga_USFX_LAB02Pawn::ShotTimerExpired()
 
 void AGalaga_USFX_LAB02Pawn::Teleport()
 {
-	SetActorLocation(posicionInicial);
+	FVector NewLocation = GetActorLocation() + FVector(FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(0.0f, 0.0f)); 
+	SetActorLocation(NewLocation); 
+
 }
 
 void AGalaga_USFX_LAB02Pawn::Energia()
@@ -212,6 +234,13 @@ void AGalaga_USFX_LAB02Pawn::AumentarVida()
 	VidasRestantes++;
 }
 
+void AGalaga_USFX_LAB02Pawn::Desactivar()
+{
+	SetActorHiddenInGame(false);
+	//SetActorEnableCollision(false);
+	//SetActorTickEnabled(false);
+}
+
 void AGalaga_USFX_LAB02Pawn::ReducirVida()
 {
 	if (VidasRestantes > 0)
@@ -228,3 +257,41 @@ void AGalaga_USFX_LAB02Pawn::CheckDestroy()
 		Destroy();
 	}
 }
+
+void AGalaga_USFX_LAB02Pawn::SetStrategy(IIStrategyPawn* NewStrategy)
+{
+		Strategy = NewStrategy;
+}
+
+void AGalaga_USFX_LAB02Pawn::ActivateStrategy()
+{
+	if (Strategy)
+	{
+		Strategy->ExecuteStrategy(); 
+	}
+}
+
+void AGalaga_USFX_LAB02Pawn::KeyDefensiveStrategy()
+{
+	StrategyDefensive =GetWorld()->SpawnActor<AStrategyDefensive>(AStrategyDefensive::StaticClass()); 
+	SetStrategy(StrategyDefensive);
+	StrategyDefensive->ExecuteStrategy();  
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Defensive Strategy On"));
+}
+
+void AGalaga_USFX_LAB02Pawn::KeyOffensiveStrategy()
+{
+	StrategyOffensive = GetWorld()->SpawnActor<AStrategyOffensive>(AStrategyOffensive::StaticClass());
+	SetStrategy(StrategyOffensive);
+	StrategyOffensive->ExecuteStrategy(); 
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Offensive Strategy On"));
+}
+
+void AGalaga_USFX_LAB02Pawn::KeyDeluxeStrategy()
+{
+	StrategyDeluxe = GetWorld()->SpawnActor<AStrategyDeluxe>(AStrategyDeluxe::StaticClass()); 
+	SetStrategy(StrategyDeluxe);
+	StrategyDeluxe->ExecuteStrategy(); 
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Deluxe Strategy On"));
+}
+

@@ -28,6 +28,9 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Wi
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/CapsulaEnergia.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/CapsulaEnergia.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CapsulaEnergia.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/CapsulaVida.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/CapsulaVida.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CapsulaVida.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/CrazyState.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/CrazyState.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CrazyState.generated.h
@@ -76,6 +79,8 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IStrategyPawn.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IStrategyPawn.generated.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Galaga_USFX_LAB02Pawn.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/Galaga_USFX_LAB02Projectile.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/Galaga_USFX_LAB02Projectile.h
@@ -174,6 +179,12 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Wi
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/ShipYorke.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/ShipYorke.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\ShipYorke.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyAlly.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyAlly.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyAlly.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyCrazy.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyCrazy.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyCrazy.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyStraight.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyStraight.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyStraight.generated.h

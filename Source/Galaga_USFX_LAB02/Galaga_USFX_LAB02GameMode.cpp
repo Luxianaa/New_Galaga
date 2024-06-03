@@ -117,7 +117,7 @@ void AGalaga_USFX_LAB02GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Tiempo += DeltaTime;   
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Tiempo: %f"), Tiempo)); 
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Tiempo: %f"), Tiempo)); 
 	if (Tiempo >= 5.0f)
 	{
 		ShipYorke->SetStrategy(StrategyStraight); 
