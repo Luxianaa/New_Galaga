@@ -14,7 +14,7 @@ AAliens::AAliens()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	VelocidadVertical = 1.0f; 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> meshA(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone_2.Shape_Cone_2'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> meshA(TEXT("StaticMesh'/Game/StarterContent/Assets/fd4627fa2f53_d35e87a8daf0_moai__3d_asset_0_gl_fbx/d35e87a8daf0_moai__3d_asset_0_gl.d35e87a8daf0_moai__3d_asset_0_gl'"));
 	meshAlien = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshAlien")); 
 	Movimiento = CreateDefaultSubobject<UAComponenteMovimiento>(TEXT("Movimiento"));
 	meshAlien->SetupAttachment(RootComponent); 

@@ -23,8 +23,10 @@
 AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
 {
 	// set default pawn class to our character zz
+	PrimaryActorTick.bCanEverTick = true;
 	DefaultPawnClass = AGalaga_USFX_LAB02Pawn::StaticClass();
-	Time = 0.0f;
+	//Time = 0.0f;
+	Tiempo = 0.0f;
 }
 
 void AGalaga_USFX_LAB02GameMode::BeginPlay()
@@ -70,15 +72,8 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 
 	FVector SpawnLocation5 = FVector(-700.0f, -115.0f, 200.0f);
 	NavePrueba = GetWorld()->SpawnActor<ANavePruebas>(ANavePruebas::StaticClass(), SpawnLocation5, FRotator::ZeroRotator); 
-
 	StrategyStraight = GetWorld()->SpawnActor<AStrategyStraight>(AStrategyStraight::StaticClass());  
 
-	if (NavePrueba)
-	{
-		NavePrueba->SetMovementStrategy(StrategyStraight); 
-		NavePrueba->CrearMovimiento(5.0f);//crear movmiento a los 5 segundos 
-	}
-	
 	
 
 //-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//
@@ -118,7 +113,13 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 void AGalaga_USFX_LAB02GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Time += DeltaTime; 
+	Tiempo += DeltaTime;   
+	if (Tiempo >= 5.0f)
+	{
+	
+		NavePrueba->SetStrategy(StrategyStraight);
+		NavePrueba->ActivarEstrategia(); 
+	}
 }
 
 

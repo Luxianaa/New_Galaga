@@ -1,5 +1,5 @@
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB02\Definitions.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\CrazyState.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB02\Definitions.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\CrazyState.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\CoreMinimal.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\CoreTypes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\HAL/Platform.h
@@ -501,8 +501,8 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MaterialMerging.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Level.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Actor.generated.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IHendrixState.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IHendrixState.generated.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CrazyState.generated.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\HendrixShip.h
-C:\Users\lucia\Desktop\Nuevo Galaga - Copy - Copy\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\HendrixShip.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IHendrixState.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IHendrixState.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\CrazyState.generated.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\HendrixShip.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\HendrixShip.generated.h

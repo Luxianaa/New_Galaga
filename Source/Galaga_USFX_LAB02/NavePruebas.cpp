@@ -9,11 +9,12 @@ ANavePruebas::ANavePruebas()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshPrueba(TEXT("StaticMesh'/Game/StarterContent/Props/SM_Bush_3.SM_Bush_3'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshPrueba(TEXT("StaticMesh'/Game/StarterContent/Props/SM_Chair_2.SM_Chair_2'"));
 	NaveMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("NavePrueba"));
 	NaveMesh->SetupAttachment(RootComponent);
 	NaveMesh->SetStaticMesh(MeshPrueba.Object);
 	RootComponent = NaveMesh; 
+	NaveMesh->SetRelativeScale3D(FVector(1.5f, 1.5f, 1.5f));
 }
 
 // Called when the game starts or when spawned
@@ -27,29 +28,26 @@ void ANavePruebas::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime); 
 	//CrearMovimiento(DeltaTime); 
-} 
-
-void ANavePruebas::SetMovementStrategy(AActor* NewStrategy)
+	ActivarEstrategia(); 
+}
+void ANavePruebas::SetStrategy(IIStrategy* NewStrategy)
 {
-	Strategy = Cast<IIStrategy>(NewStrategy); 
-	if (!Strategy)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("No se pudo castear a IIStrategy")); 
-	}
+	Strategy = NewStrategy; 
 }
 
-void ANavePruebas::CrearMovimiento(float DeltaTime)
+void ANavePruebas::ActivarEstrategia()
 {
+
 	if (Strategy)
 	{
-		Strategy->Move(this,DeltaTime); 
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("No se ha asignado una estrategia de movimiento"));  
-	}
+		Strategy->ExecuteStrategy(this); 
 
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Estrategia Activada"));
+	}
+	
 }
+
+
 
 
 

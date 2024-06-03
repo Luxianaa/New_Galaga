@@ -25,12 +25,15 @@ public:
 	float limiteInferiorY = 1600.0f; 
 	int DireccionMovimientoHorizontal = 1; 
 	float Speed;
+	float Time; 
+
 	float Radio;
 	float Angulo;
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void  Move(class ANavePruebas* Nave,float DeltaTime) override;  
+	//virtual void  Move(class ANavePruebas* Nave,float DeltaTime) override;  
+	virtual void ExecuteStrategy(class ANavePruebas* Nave) override;
 
 
 }; 

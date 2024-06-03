@@ -40,7 +40,7 @@ protected:
 	class AHendrixShip* HendrixShip;
 	class AShipRager* ShipRager;
 	//---------------------------Strategy
-	float Time;  
+	float Tiempo;  
 	class AStrategyStraight* StrategyStraight;
 	class ANavePruebas* NavePrueba;
 	//class IIStrategy* Strategy;
