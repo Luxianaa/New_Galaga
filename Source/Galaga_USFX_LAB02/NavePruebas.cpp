@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+	// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "NavePruebas.h"
@@ -28,24 +28,24 @@ void ANavePruebas::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime); 
 	//CrearMovimiento(DeltaTime); 
-	ActivarEstrategia(); 
+	//ActivarEstrategia(); 
 }
-void ANavePruebas::SetStrategy(IIStrategy* NewStrategy)
-{
-	Strategy = NewStrategy; 
-}
-
-void ANavePruebas::ActivarEstrategia()
-{
-
-	if (Strategy)
-	{
-		Strategy->ExecuteStrategy(this); 
-
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Estrategia Activada"));
-	}
-	
-}
+//void ANavePruebas::SetStrategy(IIStrategy* NewStrategy)
+//{
+//	Strategy = NewStrategy; 
+//}
+//
+//void ANavePruebas::ActivarEstrategia()
+//{
+//
+//	if (Strategy)
+//	{
+//		Strategy->ExecuteStrategy(this); 
+//
+//		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Estrategia Activada"));
+//	}
+//	
+//}
 
 
 

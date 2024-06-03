@@ -42,8 +42,14 @@ protected:
 	//---------------------------Strategy
 	float Tiempo;  
 	class AStrategyStraight* StrategyStraight;
+	class AStrategyCrazy* StrategyCrazy;
+	class AStrategyAlly* StrategyAlly; 
 	class ANavePruebas* NavePrueba;
+	class ANaveEnemiga * NaveEnemiga;
 	//class IIStrategy* Strategy;
+	bool bStrategyStraightExecuted = false;
+	bool bStrategyCrazyExecuted = false;
+	bool bStrategyAllyExecuted = false;
 };
 
 

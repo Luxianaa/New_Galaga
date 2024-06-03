@@ -17,7 +17,8 @@
 #include "StrategyStraight.h"
 #include "Engine/World.h"
 #include "IStrategy.h" 
-#include "Engine/Engine.h"
+#include "StrategyCrazy.h"
+#include "StrategyAlly.h"
 
 
 AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
@@ -36,7 +37,7 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	//--------------------------------------------------FACADE-------------------------------------------------------------------------------//
 	FVector SpawnLocation2 = FVector(320.0f, 1480.0f, 990.0f);
 	FRotator SpawnRotation = FRotator(0.0f, 180.0f, 0.0f);
-	FVector SpawnLocation = FVector(-2425.0f, -115.0f, 400.0f);
+	FVector SpawnLocation = FVector(-4000.0f, -115.0f, 200.0f);
 
 	ShipYorke = GetWorld()->SpawnActor<AShipYorke>(AShipYorke::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
 	Moon = GetWorld()->SpawnActor<AMoon>(SpawnLocation2, SpawnRotation);  
@@ -44,7 +45,7 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	ShipYorke->SetPublisher(Publisher); //suscrito al publisher agregar al publicador
 	Publisher->ObserveMoon(Moon);//observa la luna
 
-	FVector SpawnLocation3 = FVector(-700.0f, -115.0f, 200.0f);
+	FVector SpawnLocation3 = FVector(-900.0f, -115.0f, 200.0f);
 
 	HendrixShip = GetWorld()->SpawnActor<AHendrixShip>(AHendrixShip::StaticClass(), SpawnLocation3, SpawnRotation); 
 
@@ -71,8 +72,10 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	//--------------------------------------------------STRATEGY-------------------------------------------------------------------------------//
 
 	FVector SpawnLocation5 = FVector(-700.0f, -115.0f, 200.0f);
-	NavePrueba = GetWorld()->SpawnActor<ANavePruebas>(ANavePruebas::StaticClass(), SpawnLocation5, FRotator::ZeroRotator); 
-	StrategyStraight = GetWorld()->SpawnActor<AStrategyStraight>(AStrategyStraight::StaticClass());  
+//	NavePrueba = GetWorld()->SpawnActor<ANavePruebas>(ANavePruebas::StaticClass(), SpawnLocation5, FRotator::ZeroRotator); 
+	StrategyStraight = GetWorld()->SpawnActor<AStrategyStraight>(AStrategyStraight::StaticClass());    
+	StrategyCrazy = GetWorld()->SpawnActor<AStrategyCrazy>(AStrategyCrazy::StaticClass());  
+	StrategyAlly = GetWorld()->SpawnActor<AStrategyAlly>(AStrategyAlly::StaticClass());   
 
 	
 
@@ -114,13 +117,28 @@ void AGalaga_USFX_LAB02GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Tiempo += DeltaTime;   
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Tiempo: %f"), Tiempo)); 
 	if (Tiempo >= 5.0f)
 	{
-	
-		NavePrueba->SetStrategy(StrategyStraight);
-		NavePrueba->ActivarEstrategia(); 
+		ShipYorke->SetStrategy(StrategyStraight); 
+		ShipYorke->ActivarEstrategia();  
 	}
-}
+	
+	if (Tiempo >= 10.0f)
+	//else if (Tiempo >= 10.0f) //
+	{
+		 
+		ShipYorke->SetStrategy(StrategyCrazy);   
+		ShipYorke->ActivarEstrategia();  
+	}
+	
+	if (Tiempo >= 15.0f)
+	{
+
+		ShipYorke->SetStrategy(StrategyAlly); 
+		ShipYorke->ActivarEstrategia(); 
+	}
+} 
 
 
 

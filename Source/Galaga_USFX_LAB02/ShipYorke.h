@@ -39,4 +39,12 @@ public:
 	void DestroySubs(); 
 	void DoubleFire();
 	bool bIsDoubleFiring; 
+
+private:
+	class IIStrategy* Strategy;
+
+public:
+	void SetStrategy(IIStrategy* NewStrategy);
+	void ActivarEstrategia();
+	//
 };

@@ -112,6 +112,19 @@ void AShipYorke::DoubleFire()
 	}
 }
 
+void AShipYorke::SetStrategy(IIStrategy* NewStrategy)
+{
+	Strategy = NewStrategy; 
+}
+
+void AShipYorke::ActivarEstrategia()
+{
+	if (Strategy)
+	{
+		Strategy->ExecuteStrategy(this); 
+	}
+}
+
 void AShipYorke::SetPublisher(APublisher* _Publisher)
 {
 		Publisher = _Publisher; 

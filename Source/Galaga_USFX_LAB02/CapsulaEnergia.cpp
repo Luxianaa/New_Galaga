@@ -28,3 +28,9 @@ void ACapsulaEnergia::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
+
+void ACapsulaEnergia::Drop()
+{
+	FVector NewLocation = GetActorLocation() + GetActorForwardVector() *300;
+	SetActorLocation(NewLocation);
+}

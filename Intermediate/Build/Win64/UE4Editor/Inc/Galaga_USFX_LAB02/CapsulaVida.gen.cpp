@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ACapsulaVida::execOnHit)
 	{
@@ -125,6 +126,11 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -142,6 +148,18 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 		{ "ModuleRelativePath", "CapsulaVida.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACapsulaVida_Statics::NewProp_ProjectileMovement_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "CapsulaVida.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACapsulaVida_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00200800000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACapsulaVida, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACapsulaVida_Statics::NewProp_ProjectileMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACapsulaVida_Statics::NewProp_ProjectileMovement_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACapsulaVida_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACapsulaVida_Statics::NewProp_ProjectileMovement,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACapsulaVida_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACapsulaVida>::IsAbstract,
 	};
@@ -151,11 +169,11 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		FuncInfo,
-		nullptr,
+		Z_Construct_UClass_ACapsulaVida_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ACapsulaVida_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ACapsulaVida_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ACapsulaVida_Statics::Class_MetaDataParams))
@@ -169,7 +187,7 @@ void EmptyLinkFunctionForGeneratedCodeCapsulaVida() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACapsulaVida, 2337820898);
+	IMPLEMENT_CLASS(ACapsulaVida, 2150160700);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<ACapsulaVida>()
 	{
 		return ACapsulaVida::StaticClass();

@@ -25,13 +25,13 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-private:
-	 class IIStrategy* Strategy; 
-
-public:
-	void SetStrategy(IIStrategy* NewStrategy);
-	void ActivarEstrategia();
-	//
+//private:
+//	 class IIStrategy* Strategy; 
+//
+//public:
+//	void SetStrategy(IIStrategy* NewStrategy);
+//	void ActivarEstrategia();
+//	//
 	//void SetMovementStrategy(AActor* NewStrategy); 
 	//void CrearMovimiento(float DeltaTime); 
 

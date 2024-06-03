@@ -21,19 +21,16 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	float MovimientoNaves = 4; 
-	float limiteInferiorY = 1600.0f; 
-	int DireccionMovimientoHorizontal = 1; 
-	float Speed;
-	float Time; 
-
-	float Radio;
-	float Angulo;
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+private:
+	float LimiteDerecho;
+	float LimiteIzquierdo;
+	float VelocidadHorizontal;
+	int32 DireccionMovimientoHorizontal;
+	float Time; 
 	//virtual void  Move(class ANavePruebas* Nave,float DeltaTime) override;  
-	virtual void ExecuteStrategy(class ANavePruebas* Nave) override;
+	virtual void ExecuteStrategy(class AShipYorke* Yorke) override;
 
 
 }; 

@@ -12,10 +12,13 @@ AStrategyStraight::AStrategyStraight()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	Radio = 10.0f;
-	Angulo = 0.0f;
-	Speed = 2.0f;
-	Time = 0.0f;
+
+
+    Time = 0.0f;
+    LimiteDerecho = 1528.0f;
+    LimiteIzquierdo = -1600.0f;
+    VelocidadHorizontal = 800.0f;
+    DireccionMovimientoHorizontal = 1;
 }
 
 // Called when the game starts or when spawned
@@ -30,26 +33,44 @@ void AStrategyStraight::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Time += DeltaTime;
+   // ExecuteStrategy(nullptr);
 }
 
-void AStrategyStraight::ExecuteStrategy(ANavePruebas* Nave)
+void AStrategyStraight::ExecuteStrategy(AShipYorke* Yorke) 
 {
-	if (Nave)
-	{
-		Angulo += Speed * Time;
-		float PosicionX = Nave->GetActorLocation().X + Radio * FMath::Cos(Angulo) ;
-		float PosicionY = Nave->GetActorLocation().Y + Radio * FMath::Sin(Angulo) ;
-		FVector NuevaPosicion = FVector(PosicionX, PosicionY, Nave->GetActorLocation().Z);
-		Nave->SetActorLocation(NuevaPosicion);
-	}
-}
+    FVector PosicionActual = Yorke->GetActorLocation();
+    float DesplazamientoHorizontal = VelocidadHorizontal * Yorke->GetWorld()->DeltaTimeSeconds;
 
-//void AStrategyStraight::Move(ANavePruebas* Nave, float DeltaTime)
-//{
-//	FVector NewPosition = Nave->GetActorLocation();  
-//	NewPosition.X -= DeltaTime * Speed;  
-//	Nave->SetActorLocation(NewPosition);  
-//}
+    // Verificar si la nave está moviéndose hacia derecha o izquierda
+    if (DireccionMovimientoHorizontal == 1) // Movimiento hacia derecha
+    {
+        // Mover la nave hacia derecha en el eje X
+        FVector NuevaPosicion = PosicionActual + FVector(DesplazamientoHorizontal, 0.0f, 0.0f);
+        if (NuevaPosicion.X <= LimiteDerecho)
+        {
+            Yorke->SetActorLocation(NuevaPosicion);
+        }
+        else
+        {
+            // Si alcanza el límite derecho, cambiar la dirección de movimiento a hacia izquierda
+            DireccionMovimientoHorizontal = -1;
+        }
+    }
+    else // Movimiento hacia izquierda
+    {
+        // Mover la nave hacia izquierda en el eje X
+        FVector NuevaPosicion = PosicionActual - FVector(DesplazamientoHorizontal, 0.0f, 0.0f);
+        if (NuevaPosicion.X >= LimiteIzquierdo)
+        {
+            Yorke->SetActorLocation(NuevaPosicion);
+        }
+        else
+        {
+            // Si alcanza el límite izquierdo, cambiar la dirección de movimiento a hacia la derecha
+            DireccionMovimientoHorizontal = 1;
+        }
+    }
+}
 
 
 

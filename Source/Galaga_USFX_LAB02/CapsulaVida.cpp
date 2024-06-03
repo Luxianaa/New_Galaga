@@ -8,6 +8,7 @@
 ACapsulaVida::ACapsulaVida()
 {
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> mallaC(TEXT("StaticMesh'/Game/TwinStick/Meshes/HealthCapsule.HealthCapsule'"));
+	//ProjectileMovement->ProjectileGravityScale = 1.0f;  
 	mallaCapsula->SetStaticMesh(mallaC.Object);
 	mallaCapsula->BodyInstance.SetCollisionProfileName("Capsule");
 	mallaCapsula->OnComponentHit.AddDynamic(this, &ACapsulaVida::OnHit);
@@ -21,4 +22,10 @@ void ACapsulaVida::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrim
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
+}
+
+void ACapsulaVida::Drop()
+{
+	FVector NewLocation = GetActorLocation() + GetActorForwardVector() *300; 
+	SetActorLocation(NewLocation);
 }
