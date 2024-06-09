@@ -45,6 +45,6 @@ private:
 
 public:
 	void SetStrategy(IIStrategy* NewStrategy);
-	void ActivarEstrategia();
+	void ActivarEstrategiaMovimiento();
 	//
 };

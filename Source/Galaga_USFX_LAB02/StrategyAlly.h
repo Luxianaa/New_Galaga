@@ -23,7 +23,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void ExecuteStrategy(class AShipYorke* Yorke) override;  
+	virtual void Move(class AShipYorke* Yorke) override;
 private:
 	float Radio;// dio de la circunferencia
 	float Angulo; // Ángulo inicial

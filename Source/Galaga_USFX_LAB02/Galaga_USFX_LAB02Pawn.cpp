@@ -65,6 +65,7 @@ AGalaga_USFX_LAB02Pawn::AGalaga_USFX_LAB02Pawn()
 	SetActorLocation(FVector(-885.0f, -122.0f, 200.0f));// posicion inicial del jugador  
 	posicionInicial = GetActorLocation();
 	PlayerInputEnabled = true;
+	VidasRestantes = 200;
 
 }
 
@@ -83,9 +84,9 @@ void AGalaga_USFX_LAB02Pawn::SetupPlayerInputComponent(class UInputComponent* Pl
 	PlayerInputComponent->BindAction("Desactivar", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Desactivar);  
 	
 	// Define la acción "Teleport" y vincula la tecla "T" a ella
-	FInputActionKeyMapping Teleport("Teleport", EKeys::T);
-	UPlayerInput::AddEngineDefinedActionMapping(Teleport);
-	PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport);
+	FInputActionKeyMapping Teleport("Teleport", EKeys::T); 
+	UPlayerInput::AddEngineDefinedActionMapping(Teleport); 
+	//PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport);
 	// Vincula la acción "Teleport" a la función de teletransporte de tu Pawn
 	
 	//-----------------------------------------------------------------------------------------------------------------------//
@@ -101,6 +102,12 @@ void AGalaga_USFX_LAB02Pawn::SetupPlayerInputComponent(class UInputComponent* Pl
 	PlayerInputComponent->BindAction("Deluxe", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::KeyDeluxeStrategy);
 	FInputActionKeyMapping Deluxe("Deluxe", EKeys::B);
 	UPlayerInput::AddEngineDefinedActionMapping(Deluxe);
+
+	//-----------------------------------------------------------------------------------------------------------------------//
+
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Jump);	
+	FInputActionKeyMapping Jump("Jump", EKeys::SpaceBar); 
+	UPlayerInput::AddEngineDefinedActionMapping(Jump);
 }
 
 void AGalaga_USFX_LAB02Pawn::Tick(float DeltaSeconds)
@@ -187,12 +194,14 @@ void AGalaga_USFX_LAB02Pawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
-void AGalaga_USFX_LAB02Pawn::Teleport()
+void AGalaga_USFX_LAB02Pawn::Teleport2()
 {
 	FVector NewLocation = GetActorLocation() + FVector(FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(0.0f, 0.0f)); 
 	SetActorLocation(NewLocation); 
 
 }
+
+
 
 void AGalaga_USFX_LAB02Pawn::Energia()
 {
@@ -251,6 +260,7 @@ void AGalaga_USFX_LAB02Pawn::ReducirVida()
 
 void AGalaga_USFX_LAB02Pawn::CheckDestroy()
 {
+	VidasRestantes-=25;
 	if (VidasRestantes <= 0)
 	{
 		// Código para destruir el pawn, por ejemplo:
@@ -265,17 +275,17 @@ void AGalaga_USFX_LAB02Pawn::SetStrategy(IIStrategyPawn* NewStrategy)
 
 void AGalaga_USFX_LAB02Pawn::ActivateStrategy()
 {
-	if (Strategy)
-	{
-		Strategy->ExecuteStrategy(); 
-	}
+		if (Strategy)
+		{
+			Strategy->MoveFireHide();
+		}
 }
 
 void AGalaga_USFX_LAB02Pawn::KeyDefensiveStrategy()
 {
 	StrategyDefensive =GetWorld()->SpawnActor<AStrategyDefensive>(AStrategyDefensive::StaticClass()); 
 	SetStrategy(StrategyDefensive);
-	StrategyDefensive->ExecuteStrategy();  
+	StrategyDefensive->MoveFireHide();
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Defensive Strategy On"));
 }
 
@@ -283,7 +293,7 @@ void AGalaga_USFX_LAB02Pawn::KeyOffensiveStrategy()
 {
 	StrategyOffensive = GetWorld()->SpawnActor<AStrategyOffensive>(AStrategyOffensive::StaticClass());
 	SetStrategy(StrategyOffensive);
-	StrategyOffensive->ExecuteStrategy(); 
+	StrategyOffensive->MoveFireHide(); 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Offensive Strategy On"));
 }
 
@@ -291,7 +301,42 @@ void AGalaga_USFX_LAB02Pawn::KeyDeluxeStrategy()
 {
 	StrategyDeluxe = GetWorld()->SpawnActor<AStrategyDeluxe>(AStrategyDeluxe::StaticClass()); 
 	SetStrategy(StrategyDeluxe);
-	StrategyDeluxe->ExecuteStrategy(); 
+	StrategyDeluxe->MoveFireHide(); 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Deluxe Strategy On"));
 }
+
+void AGalaga_USFX_LAB02Pawn::IniciarEstrategias()
+{
+
+	if (VidasRestantes >= 100)
+	{
+		SetStrategy(StrategyDefensive); 
+		StrategyDefensive->MoveFireHide(); 
+	}
+	else if (VidasRestantes >= 50 && VidasRestantes < 100)
+	{
+		SetStrategy(StrategyDeluxe);
+		StrategyDeluxe->MoveFireHide();
+	}
+	else
+	{
+		SetStrategy(StrategyDeluxe); 
+		StrategyDeluxe->MoveFireHide(); 
+	}
+}
+
+void AGalaga_USFX_LAB02Pawn::Teleport()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, FString::Printf(TEXT("Jugador empezo a Teletransportar")));
+	FVector NewLocation = GetActorLocation() + FVector(FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(-6000.0f, 6000.0f), FMath::FRandRange(0.0f, 0.0f)); 
+	SetActorLocation(NewLocation); 
+}
+
+void AGalaga_USFX_LAB02Pawn::Jump()
+{
+	FVector PosicionActual = GetActorLocation(); 
+	float AlturaSalto = 100.0f; 
+	FVector NuevaPosicion = FVector(PosicionActual.X, PosicionActual.Y, PosicionActual.Z + AlturaSalto);  
+}
+
 

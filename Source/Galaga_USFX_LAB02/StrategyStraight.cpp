@@ -36,7 +36,7 @@ void AStrategyStraight::Tick(float DeltaTime)
    // ExecuteStrategy(nullptr);
 }
 
-void AStrategyStraight::ExecuteStrategy(AShipYorke* Yorke) 
+void AStrategyStraight::Move(AShipYorke* Yorke)
 {
     FVector PosicionActual = Yorke->GetActorLocation();
     float DesplazamientoHorizontal = VelocidadHorizontal * Yorke->GetWorld()->DeltaTimeSeconds;

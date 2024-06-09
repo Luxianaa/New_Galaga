@@ -46,10 +46,16 @@ protected:
 	class AStrategyAlly* StrategyAlly; 
 	class ANavePruebas* NavePrueba;
 	class ANaveEnemiga * NaveEnemiga;
-	//class IIStrategy* Strategy;
-	bool bStrategyStraightExecuted = false;
-	bool bStrategyCrazyExecuted = false;
-	bool bStrategyAllyExecuted = false;
+	//-------------------------------
+
+	class AGalaga_USFX_LAB02Pawn * Pawn;
+	class AInvoker* Invoker;
+	class ACommandTeleport* CommandTeleport;
+
+	void ExecuteCommandTeleport();
+	float Temp;
+
+
 };
 
 

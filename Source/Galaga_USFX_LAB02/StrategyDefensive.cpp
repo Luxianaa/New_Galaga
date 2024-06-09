@@ -28,7 +28,7 @@ void AStrategyDefensive::Tick(float DeltaTime)
 
 }
 
-void AStrategyDefensive::ExecuteStrategy()
+void AStrategyDefensive::MoveFireHide()
 {
 	Pawn = Cast<AGalaga_USFX_LAB02Pawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	Pawn->MoveSpeed = +900.0f;  

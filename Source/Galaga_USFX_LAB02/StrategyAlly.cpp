@@ -36,7 +36,7 @@ void AStrategyAlly::Tick(float DeltaTime)
 
 }
 
-void AStrategyAlly::ExecuteStrategy(AShipYorke* Yorke)
+void AStrategyAlly::Move(AShipYorke* Yorke)
 {
 	Angulo += Speed * Time;
 	float PosicionX = Yorke->GetActorLocation().X + Radio * FMath::Cos(Angulo);

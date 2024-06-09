@@ -16,8 +16,7 @@ AStrategyDeluxe::AStrategyDeluxe()
 // Called when the game starts or when spawned
 void AStrategyDeluxe::BeginPlay()
 {
-	Super::BeginPlay();
-	bIsHidden = false; 
+	Super::BeginPlay(); 
 }
 
 // Called every frame
@@ -27,17 +26,13 @@ void AStrategyDeluxe::Tick(float DeltaTime)
 
 }
 
-void AStrategyDeluxe::ExecuteStrategy()
+void AStrategyDeluxe::MoveFireHide()
 {
-	Pawn = Cast<AGalaga_USFX_LAB02Pawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));     
-	bIsHidden = !bIsHidden;  
-	if(bIsHidden) 
-	{ 
+	Pawn = Cast<AGalaga_USFX_LAB02Pawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));     //
 		Pawn->SetActorHiddenInGame(true); 
 		Pawn->SetActorEnableCollision(false);  
 		UE_LOG(LogTemp, Warning, TEXT("Pawn is now hidden")); 
 		/*bool Desaparecer = FMath::RandBool();   
 		Pawn->SetActorHiddenInGame(!Desaparecer);   */
-	}
 }
 

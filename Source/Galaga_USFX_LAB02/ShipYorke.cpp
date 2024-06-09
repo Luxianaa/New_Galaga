@@ -117,11 +117,11 @@ void AShipYorke::SetStrategy(IIStrategy* NewStrategy)
 	Strategy = NewStrategy; 
 }
 
-void AShipYorke::ActivarEstrategia()
+void AShipYorke::ActivarEstrategiaMovimiento()
 {
 	if (Strategy)
 	{
-		Strategy->ExecuteStrategy(this); 
+		Strategy->Move(this);    
 	}
 }
 

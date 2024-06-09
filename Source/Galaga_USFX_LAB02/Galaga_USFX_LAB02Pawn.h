@@ -81,7 +81,7 @@ public:
 protected:
 	int ContImpacto;
 public:
-	void Teleport();
+	void Teleport2();
 	FVector posicionInicial;
 	void Energia();
 	FTimerHandle TimerHandle_Energia;
@@ -99,15 +99,15 @@ public:
 	void RecibirImpacto();
 	int GetVidasRestantes() const { return VidasRestantes; }
 	void AumentarVida();
-	void Desactivar();  
+	void Desactivar();
 
 public:
 	void ReducirVida();
 	void CheckDestroy();
-	int VidasRestantes = 3;
+	float VidasRestantes;
 
-private :
-		IIStrategyPawn* Strategy;
+private:
+	IIStrategyPawn* Strategy;
 public:
 	void SetStrategy(IIStrategyPawn* NewStrategy);
 	void ActivateStrategy();
@@ -119,5 +119,14 @@ public:
 	void KeyDefensiveStrategy();
 	void KeyOffensiveStrategy();
 	void KeyDeluxeStrategy();
+	void IniciarEstrategias();
+
+public:
+	void Teleport(); 
+	void Jump(); 
+	float AlturaInical;
+
+
+
 };
 

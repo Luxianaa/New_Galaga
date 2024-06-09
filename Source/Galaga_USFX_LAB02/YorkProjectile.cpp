@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "UObject/ConstructorHelpers.h"
 #include "FacadeShip.h"
+#include "Aliens.h"
 
 
 // Sets default values
@@ -64,6 +65,7 @@ void AYorkProjectile::Fire()
 void AYorkProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	FacadeShip->CollideProjectile(OtherActor);
+	FacadeShip->CollideAliens(OtherActor);
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());

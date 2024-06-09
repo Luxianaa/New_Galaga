@@ -19,13 +19,16 @@
 #include "IStrategy.h" 
 #include "StrategyCrazy.h"
 #include "StrategyAlly.h"
+#include "Invoker.h"
+#include "CommandTeleport.h"
+
 
 
 AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
 {
 	// set default pawn class to our character zz
 	PrimaryActorTick.bCanEverTick = true;
-	DefaultPawnClass = AGalaga_USFX_LAB02Pawn::StaticClass();
+	//DefaultPawnClass = AGalaga_USFX_LAB02Pawn::StaticClass();
 	//Time = 0.0f;
 	Tiempo = 0.0f;
 }
@@ -77,7 +80,13 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 	StrategyCrazy = GetWorld()->SpawnActor<AStrategyCrazy>(AStrategyCrazy::StaticClass());  
 	StrategyAlly = GetWorld()->SpawnActor<AStrategyAlly>(AStrategyAlly::StaticClass());   
 
+
+
+	//--------------------------------------------------COMMAND-------------------------------------------------------------------------------//
+
+	Invoker = GetWorld()->SpawnActor<AInvoker>(AInvoker::StaticClass()); 
 	
+	ExecuteCommandTeleport(); 
 
 //-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//
 
@@ -121,7 +130,7 @@ void AGalaga_USFX_LAB02GameMode::Tick(float DeltaTime)
 	if (Tiempo >= 5.0f)
 	{
 		ShipYorke->SetStrategy(StrategyStraight); 
-		ShipYorke->ActivarEstrategia();  
+		ShipYorke->ActivarEstrategiaMovimiento(); 
 	}
 	
 	if (Tiempo >= 10.0f)
@@ -129,16 +138,26 @@ void AGalaga_USFX_LAB02GameMode::Tick(float DeltaTime)
 	{
 		 
 		ShipYorke->SetStrategy(StrategyCrazy);   
-		ShipYorke->ActivarEstrategia();  
+		ShipYorke->ActivarEstrategiaMovimiento(); 
 	}
 	
 	if (Tiempo >= 15.0f)
 	{
 
 		ShipYorke->SetStrategy(StrategyAlly); 
-		ShipYorke->ActivarEstrategia(); 
+		ShipYorke->ActivarEstrategiaMovimiento(); 
 	}
-} 
+}
+void AGalaga_USFX_LAB02GameMode::ExecuteCommandTeleport()
+{
+	if (Invoker)
+	{
+		CommandTeleport = GetWorld()->SpawnActor<ACommandTeleport>(ACommandTeleport::StaticClass());
+		Invoker->SetCommand(CommandTeleport); 
+		Invoker->ExecuteCommand(); 
+	}
+}
+
 
 
 

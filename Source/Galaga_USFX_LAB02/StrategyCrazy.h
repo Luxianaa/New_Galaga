@@ -34,7 +34,7 @@ private:
 	int32 NumShotsFired;
 	int32 MaxShots;
 	float Time;
-	virtual void ExecuteStrategy(class AShipYorke* Yorke) override; 
+	virtual void Move(class AShipYorke* Yorke) override;
 
 
 };

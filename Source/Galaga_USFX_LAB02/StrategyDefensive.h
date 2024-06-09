@@ -25,6 +25,6 @@ private:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void ExecuteStrategy() override; 
+	virtual void MoveFireHide() override;
 
 };

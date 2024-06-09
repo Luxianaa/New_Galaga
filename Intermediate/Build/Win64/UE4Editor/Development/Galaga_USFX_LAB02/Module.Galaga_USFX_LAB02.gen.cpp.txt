@@ -96,6 +96,7 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LA
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\IObserver.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/ISetMotherShip.gen.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/IStrategy.gen.cpp
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/IStrategyPawn.gen.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MeshMotherShip.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MeshMotherShip.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MeshMotherShip.generated.h
@@ -112,6 +113,9 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Wi
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MShipProjectile.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MShipProjectile.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MShipProjectile.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/MyGalaga_USFX_LAB02Bomb.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/MyGalaga_USFX_LAB02Bomb.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MyGalaga_USFX_LAB02Bomb.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/NasMotherShip.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/NasMotherShip.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\NasMotherShip.generated.h
@@ -185,6 +189,15 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Wi
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyCrazy.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyCrazy.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyCrazy.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyDefensive.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyDefensive.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyDefensive.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyDeluxe.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyDeluxe.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyDeluxe.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyOffensive.gen.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyOffensive.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyOffensive.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_LAB02/StrategyStraight.gen.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02/StrategyStraight.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyStraight.generated.h

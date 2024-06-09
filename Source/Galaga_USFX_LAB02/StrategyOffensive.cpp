@@ -27,12 +27,12 @@ void AStrategyOffensive::Tick(float DeltaTime)
 
 }
 
-void AStrategyOffensive::ExecuteStrategy()
+void AStrategyOffensive::MoveFireHide()
 {
 	Pawn = Cast<AGalaga_USFX_LAB02Pawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	Pawn->MoveSpeed = +3000.0f; 
 	Pawn->FireRate = 0.1f; 
-	Pawn->Teleport(); 
+	Pawn->Teleport2(); 
 
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Offensive Strategy On"));
 }

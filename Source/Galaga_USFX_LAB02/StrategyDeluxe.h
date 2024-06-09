@@ -24,9 +24,6 @@ private:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void ExecuteStrategy() override; 
-private:
-	// Variable para almacenar el estado de visibilidad
-	bool bIsHidden;  
+	virtual void MoveFireHide() override;
 
 };

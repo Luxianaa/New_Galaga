@@ -39,7 +39,7 @@ void AStrategyCrazy::Tick(float DeltaTime)
 
 }
 
-void AStrategyCrazy::ExecuteStrategy(AShipYorke* Yorke)
+void AStrategyCrazy::Move(AShipYorke* Yorke)
 {
     if (TargetLocations.Num() == 0) return;
 

@@ -30,7 +30,7 @@ private:
 	int32 DireccionMovimientoHorizontal;
 	float Time; 
 	//virtual void  Move(class ANavePruebas* Nave,float DeltaTime) override;  
-	virtual void ExecuteStrategy(class AShipYorke* Yorke) override;
+	virtual void Move(class AShipYorke* Yorke) override;  
 
 
 }; 
