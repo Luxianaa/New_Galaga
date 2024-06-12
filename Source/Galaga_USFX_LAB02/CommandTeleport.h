@@ -19,16 +19,15 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+private:
+	class AShipPatrol* Receptor;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
 public:
+
+	void SetReceptor(class AShipPatrol* _Receptor);
 	virtual void Execute() override;
 	virtual void Undo() override;
-
-	//virtual void Redo() override;
-private:
-	class AGalaga_USFX_LAB02Pawn* Pawn;
 };

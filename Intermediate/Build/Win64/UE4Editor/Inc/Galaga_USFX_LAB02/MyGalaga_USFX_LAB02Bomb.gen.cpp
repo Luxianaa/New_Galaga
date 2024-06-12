@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGalaga_USFX_LAB02Bomb() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyGalaga_USFX_LAB02Bomb, 968416927);
+	IMPLEMENT_CLASS(AMyGalaga_USFX_LAB02Bomb, 3389924141);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AMyGalaga_USFX_LAB02Bomb>()
 	{
 		return AMyGalaga_USFX_LAB02Bomb::StaticClass();

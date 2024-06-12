@@ -121,10 +121,9 @@ public:
 	void KeyDeluxeStrategy();
 	void IniciarEstrategias();
 
-public:
 	void Teleport(); 
 	void Jump(); 
-	float AlturaInical;
+	float AlturaInical; 
 
 
 

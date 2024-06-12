@@ -14,19 +14,19 @@ class AGalaga_USFX_LAB02Projectile : public AActor
 {
 	GENERATED_BODY()
 
-	/** Sphere collision component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* ProjectileMesh;
-
-	/** Projectile movement component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 	UProjectileMovementComponent* ProjectileMovement;
+	/** Projectile movement component */
+	
 	UPROPERTY(EditAnywhere)
 	UParticleSystemComponent* ParticleSystemComponent;
 
 public:
 	AGalaga_USFX_LAB02Projectile();
-
+	/** Sphere collision component */
+	   
 
 	/** Function to handle the projectile hitting something */
 	UFUNCTION()

@@ -59,11 +59,19 @@ public: \
 
 
 #define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_Galaga_USFX_LAB02GameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Adaptader() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, Adaptader); } \
 	FORCEINLINE static uint32 __PPO__ShieldMotherShip() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, ShieldMotherShip); } \
 	FORCEINLINE static uint32 __PPO__NasMotherShip() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, NasMotherShip); } \
 	FORCEINLINE static uint32 __PPO__DoomMotherShip() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, DoomMotherShip); } \
 	FORCEINLINE static uint32 __PPO__MotherDirector() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, MotherDirector); } \
-	FORCEINLINE static uint32 __PPO__FacadeShip() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, FacadeShip); }
+	FORCEINLINE static uint32 __PPO__FacadeShip() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, FacadeShip); } \
+	FORCEINLINE static uint32 __PPO__Invoker() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, Invoker); } \
+	FORCEINLINE static uint32 __PPO__Receptor() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, Receptor); } \
+	FORCEINLINE static uint32 __PPO__CommandDrop() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandDrop); } \
+	FORCEINLINE static uint32 __PPO__CommandMove() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandMove); } \
+	FORCEINLINE static uint32 __PPO__CommandTeleport() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandTeleport); } \
+	FORCEINLINE static uint32 __PPO__CommandBomber() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandBomber); } \
+	FORCEINLINE static uint32 __PPO__CommandDestruction() { return STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandDestruction); }
 
 
 #define Galaga_USFX_LAB02_New_Source_Galaga_USFX_LAB02_Galaga_USFX_LAB02GameMode_h_9_PROLOG

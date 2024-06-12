@@ -23,9 +23,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 private:
+
 	class IICommand* Command;
 public:
-	void SetCommand(AActor* NewCommand);
+
+	void SetCommand(class IICommand* NewCommand);
 	void ExecuteCommand();
 	void UndoCommand();
+
 };

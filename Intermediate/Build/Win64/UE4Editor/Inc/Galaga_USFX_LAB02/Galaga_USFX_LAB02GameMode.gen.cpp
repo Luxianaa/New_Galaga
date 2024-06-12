@@ -17,11 +17,19 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02GameMode() {}
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AGalaga_USFX_LAB02GameMode();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_LAB02();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ABallAdapter_NoRegister();
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AShieldMotherShip_NoRegister();
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ANasMotherShip_NoRegister();
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ADoomMotherShip_NoRegister();
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AMotherDirector_NoRegister();
 	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AFacadeShip_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AInvoker_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_AShipPatrol_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ACommadDrop_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ACommandMove_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ACommandTeleport_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ACommandBomber_NoRegister();
+	GALAGA_USFX_LAB02_API UClass* Z_Construct_UClass_ACommandDestruction_NoRegister();
 // End Cross Module References
 	void AGalaga_USFX_LAB02GameMode::StaticRegisterNativesAGalaga_USFX_LAB02GameMode()
 	{
@@ -36,6 +44,10 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02GameMode() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Adaptader_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Adaptader;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShieldMotherShip_MetaData[];
 #endif
@@ -56,6 +68,34 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02GameMode() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FacadeShip_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FacadeShip;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Invoker_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Invoker;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Receptor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Receptor;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CommandDrop_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CommandDrop;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CommandMove_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CommandMove;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CommandTeleport_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CommandTeleport;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CommandBomber_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CommandBomber;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CommandDestruction_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CommandDestruction;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -73,9 +113,18 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02GameMode() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Adaptader_MetaData[] = {
+		{ "Category", "Adapter" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Adaptader = { "Adaptader", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, Adaptader), Z_Construct_UClass_ABallAdapter_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Adaptader_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Adaptader_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_ShieldMotherShip_MetaData[] = {
 		{ "Category", "ShieldMotherShip" },
+		{ "Comment", "/*UPROPERTY(VisibleAnywhere, Category = \"Pawn\")\n\x09""class AGalaga_USFX_L02Pawn* Pawn;*/" },
 		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+		{ "ToolTip", "UPROPERTY(VisibleAnywhere, Category = \"Pawn\")\n       class AGalaga_USFX_L02Pawn* Pawn;" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_ShieldMotherShip = { "ShieldMotherShip", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, ShieldMotherShip), Z_Construct_UClass_AShieldMotherShip_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_ShieldMotherShip_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_ShieldMotherShip_MetaData)) };
@@ -107,12 +156,70 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02GameMode() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_FacadeShip = { "FacadeShip", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, FacadeShip), Z_Construct_UClass_AFacadeShip_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_FacadeShip_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_FacadeShip_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Invoker_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "Comment", "//-------------------------------------------------------------\n" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Invoker = { "Invoker", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, Invoker), Z_Construct_UClass_AInvoker_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Invoker_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Invoker_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Receptor_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Receptor = { "Receptor", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, Receptor), Z_Construct_UClass_AShipPatrol_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Receptor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Receptor_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDrop_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDrop = { "CommandDrop", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandDrop), Z_Construct_UClass_ACommadDrop_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDrop_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDrop_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandMove_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandMove = { "CommandMove", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandMove), Z_Construct_UClass_ACommandMove_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandMove_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandMove_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandTeleport_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandTeleport = { "CommandTeleport", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandTeleport), Z_Construct_UClass_ACommandTeleport_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandTeleport_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandTeleport_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandBomber_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandBomber = { "CommandBomber", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandBomber), Z_Construct_UClass_ACommandBomber_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandBomber_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandBomber_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDestruction_MetaData[] = {
+		{ "Category", "GameModeBase" },
+		{ "ModuleRelativePath", "Galaga_USFX_LAB02GameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDestruction = { "CommandDestruction", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02GameMode, CommandDestruction), Z_Construct_UClass_ACommandDestruction_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDestruction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDestruction_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Adaptader,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_ShieldMotherShip,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_NasMotherShip,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_DoomMotherShip,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_MotherDirector,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_FacadeShip,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Invoker,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_Receptor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDrop,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandMove,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandTeleport,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandBomber,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::NewProp_CommandDestruction,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGalaga_USFX_LAB02GameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGalaga_USFX_LAB02GameMode>::IsAbstract,
@@ -141,7 +248,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02GameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFX_LAB02GameMode, 994902463);
+	IMPLEMENT_CLASS(AGalaga_USFX_LAB02GameMode, 721979139);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AGalaga_USFX_LAB02GameMode>()
 	{
 		return AGalaga_USFX_LAB02GameMode::StaticClass();

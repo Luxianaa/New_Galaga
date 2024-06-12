@@ -70,3 +70,4 @@ void AGalaga_USFX_LAB02Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* O
 
 	Destroy();//PARA QUE DESAPAREZCA EL PROYECTIL CUANDO CHOCA CON ALGO
 }
+

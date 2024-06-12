@@ -13,11 +13,15 @@ UCLASS()
 class GALAGA_USFX_LAB02_API AMyGalaga_USFX_LAB02Bomb : public AGalaga_USFX_LAB02Projectile
 {
 	GENERATED_BODY()
-//private:
+//public:
+//	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
+//	UStaticMeshComponent* Bomb;
+//	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
+//	UProjectileMovementComponent* BomMovement; 
+//public:
 //
 //	AMyGalaga_USFX_LAB02Bomb();  
-
-
-	//virtual void ExecuteStrategy() override;
-	
+//public:
+//	void FireInDirection(const FVector& ShootDirection) ;   
+//	void FireBomb(); 
 };

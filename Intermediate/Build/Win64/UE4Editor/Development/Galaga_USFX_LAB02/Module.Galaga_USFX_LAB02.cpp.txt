@@ -127,21 +127,14 @@ C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LA
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/FactoryShipLv1.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/Galaga_USFX_LAB02.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\Galaga_USFX_LAB02.h
-C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/Galaga_USFX_LAB02Projectile.cpp
-C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\ShieldMotherShip.h
-C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\ShieldMotherShip.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystem.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/Emitter.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Emitter.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystemComponent.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/HendrixShip.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\WeakState.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\WeakState.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/IAbsFactory.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/IBuilderMotherShip.cpp
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/ICommand.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\ICommand.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\ICommand.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/IHendrixState.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/IObserver.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\IObserver.h
@@ -159,9 +152,6 @@ C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LA
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/MShipProjectile.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\MShipProjectile.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MShipProjectile.generated.h
-C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/MyGalaga_USFX_LAB02Bomb.cpp
-C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\MyGalaga_USFX_LAB02Bomb.h
-C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\MyGalaga_USFX_LAB02Bomb.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/NasMotherShip.cpp
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\NasMotherShip.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\NasMotherShip.generated.h
@@ -188,6 +178,13 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LA
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\NavePruebas.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/Propellants.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/ProyectilEnemigo.cpp
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Particles/Emitter.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Emitter.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystemComponent.generated.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\ShipYorke.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\Publisher.h
 C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\Publisher.generated.h
@@ -195,6 +192,27 @@ C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Wi
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/Publisher.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/Shield.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/ShieldMotherShip.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\ShieldMotherShip.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\ShieldMotherShip.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/ShipRager.cpp
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/StrategyAlly.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyAlly.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyAlly.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/StrategyCrazy.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyCrazy.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyCrazy.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/StrategyDefensive.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyDefensive.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyDefensive.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/StrategyDeluxe.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyDeluxe.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyDeluxe.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/StrategyOffensive.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\StrategyOffensive.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\StrategyOffensive.generated.h
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/StrategyStraight.cpp
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Source\Galaga_USFX_LAB02\YorkProjectile.h
+C:\Users\lucia\Desktop\GALAGA ACTUAL\Galaga_USFX_LAB02_New\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB02\YorkProjectile.generated.h
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/WeakState.cpp
 C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/Weapons.cpp
+C:/Users/lucia/Desktop/GALAGA ACTUAL/Galaga_USFX_LAB02_New/Source/Galaga_USFX_LAB02/YorkProjectile.cpp

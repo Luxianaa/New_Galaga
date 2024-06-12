@@ -86,7 +86,7 @@ void AGalaga_USFX_LAB02Pawn::SetupPlayerInputComponent(class UInputComponent* Pl
 	// Define la acción "Teleport" y vincula la tecla "T" a ella
 	FInputActionKeyMapping Teleport("Teleport", EKeys::T); 
 	UPlayerInput::AddEngineDefinedActionMapping(Teleport); 
-	//PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport);
+	PlayerInputComponent->BindAction("Teleport", IE_Pressed, this, &AGalaga_USFX_LAB02Pawn::Teleport); 
 	// Vincula la acción "Teleport" a la función de teletransporte de tu Pawn
 	
 	//-----------------------------------------------------------------------------------------------------------------------//

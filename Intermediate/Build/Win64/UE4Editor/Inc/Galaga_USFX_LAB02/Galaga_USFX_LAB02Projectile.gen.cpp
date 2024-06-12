@@ -168,10 +168,8 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMesh_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Projectile" },
-		{ "Comment", "/** Sphere collision component */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Galaga_USFX_LAB02Projectile.h" },
-		{ "ToolTip", "Sphere collision component" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMesh = { "ProjectileMesh", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02Projectile, ProjectileMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMesh_MetaData)) };
@@ -179,18 +177,18 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMovement_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
-		{ "Comment", "/** Projectile movement component */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Galaga_USFX_LAB02Projectile.h" },
-		{ "ToolTip", "Projectile movement component" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02Projectile, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ProjectileMovement_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent_MetaData[] = {
 		{ "Category", "Galaga_USFX_LAB02Projectile" },
+		{ "Comment", "/** Projectile movement component */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Galaga_USFX_LAB02Projectile.h" },
+		{ "ToolTip", "Projectile movement component" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent = { "ParticleSystemComponent", nullptr, (EPropertyFlags)0x0040000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB02Projectile, ParticleSystemComponent), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB02Projectile_Statics::NewProp_ParticleSystemComponent_MetaData)) };
@@ -234,7 +232,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB02Projectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFX_LAB02Projectile, 997401787);
+	IMPLEMENT_CLASS(AGalaga_USFX_LAB02Projectile, 373615690);
 	template<> GALAGA_USFX_LAB02_API UClass* StaticClass<AGalaga_USFX_LAB02Projectile>()
 	{
 		return AGalaga_USFX_LAB02Projectile::StaticClass();

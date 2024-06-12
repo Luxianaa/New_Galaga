@@ -21,6 +21,14 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
+
+	UPROPERTY(VisibleAnywhere, Category = "Adapter")
+	class ABallAdapter* Adaptader;
+	/*UPROPERTY(VisibleAnywhere, Category = "Pawn")
+	class AGalaga_USFX_L02Pawn* Pawn;*/ 
+
+
+
 	UPROPERTY(VisibleAnywhere, Category = "ShieldMotherShip")
 	class AShieldMotherShip* ShieldMotherShip;
 	UPROPERTY(VisibleAnywhere, Category = "NasMotherShip")
@@ -46,16 +54,37 @@ protected:
 	class AStrategyAlly* StrategyAlly; 
 	class ANavePruebas* NavePrueba;
 	class ANaveEnemiga * NaveEnemiga;
-	//-------------------------------
 
-	class AGalaga_USFX_LAB02Pawn * Pawn;
+	class AGalaga_USFX_LAB02Pawn* Pawn;
+	//-------------------------------------------------------------
+
+	UPROPERTY(EditAnywhere, Category = "GameModeBase") 
 	class AInvoker* Invoker;
+	UPROPERTY(EditAnywhere, Category = "GameModeBase") 
+	class AShipPatrol* Receptor;
+	UPROPERTY(EditAnywhere, Category = "GameModeBase") 
+	class ACommadDrop* CommandDrop;
+	UPROPERTY(EditAnywhere, Category = "GameModeBase")
+	class ACommandMove* CommandMove;
+	UPROPERTY(EditAnywhere, Category = "GameModeBase")
 	class ACommandTeleport* CommandTeleport;
+	UPROPERTY(EditAnywhere, Category = "GameModeBase")
+	class ACommandBomber* CommandBomber;
+	UPROPERTY(EditAnywhere, Category = "GameModeBase")
+	class ACommandDestruction* CommandDestruction;
 
-	void ExecuteCommandTeleport();
-	float Temp;
+//-------------------------------
+	void ExecuteCommandDrop();
+	void ExecuteCommandMove();
+	void ExecuteCommandTeleport(); 
+	void ExecuteCommandBomber();
+	void DeshacerComando(); 
+//--------------------------------
 
-
+	class IICommand* UltimoComando;
+	TArray<IICommand*> Comandos;      
+	FTimerHandle TimerHandle;
+	float temp;
 };
 
 
